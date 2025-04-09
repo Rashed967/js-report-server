@@ -1,4 +1,13 @@
-const jsreport = require('jsreport')();
+const jsreport = require('jsreport')({
+  extensions: {
+    'chrome-pdf': {
+      launchOptions: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      }
+    }
+  }
+});
+
 const express = require('express');
 const path = require('path');
 const handlebars = require('handlebars'); // Import Handlebars

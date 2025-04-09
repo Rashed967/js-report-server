@@ -8137,3 +8137,122 @@ Error: Error when evaluating engine handlebars for template /preRegistationRepor
 2025-04-09T15:03:15.085Z - debug: OData query on folders
 2025-04-09T15:44:05.482Z - debug: fs journal was not synced for a while, need full reload
 2025-04-09T15:44:05.661Z - info: fs store is loading data
+2025-04-09T19:35:08.293Z - info: Initializing jsreport (version: 4.8.0, configuration file: jsreport.config.json, nodejs: 22.11.0)
+2025-04-09T19:35:08.296Z - info: Searching for available extensions in C:\projects2\jsreport-server\
+2025-04-09T19:35:08.302Z - info: Extensions location cache C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2025-04-09T19:35:11.292Z - info: Found 35 extension(s)
+2025-04-09T19:35:11.381Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-04-09T19:35:11.383Z - debug: Discovered 35 extensions
+2025-04-09T19:35:11.432Z - debug: Extension authentication@4.2.3 is disabled, skipping
+2025-04-09T19:35:11.434Z - info: Using extension base@4.0.0
+2025-04-09T19:35:11.442Z - info: Using extension child-templates@4.1.0
+2025-04-09T19:35:11.445Z - info: Using extension cli@4.1.0
+2025-04-09T19:35:11.468Z - info: Using extension components@4.0.2
+2025-04-09T19:35:11.472Z - info: Using extension data@4.1.0
+2025-04-09T19:35:11.476Z - info: Using extension express@4.2.0
+2025-04-09T19:35:12.443Z - info: Using extension freeze@4.0.0
+2025-04-09T19:35:12.445Z - info: Using extension fs-store@4.1.0
+2025-04-09T19:35:12.805Z - info: Using extension handlebars@4.0.1
+2025-04-09T19:35:12.807Z - info: Using extension import-export@4.0.6
+2025-04-09T19:35:12.834Z - info: Using extension jsrender@4.0.0
+2025-04-09T19:35:12.836Z - info: Using extension licensing@4.0.4
+2025-04-09T19:35:12.933Z - info: Using extension localization@4.0.1
+2025-04-09T19:35:12.936Z - info: Using extension npm@4.0.0
+2025-04-09T19:35:12.940Z - info: Using extension pdf-utils@4.3.0
+2025-04-09T19:35:12.958Z - info: Using extension reports@4.1.3
+2025-04-09T19:35:12.963Z - info: Using extension tags@4.0.1
+2025-04-09T19:35:12.967Z - info: Using extension text@4.0.2
+2025-04-09T19:35:12.969Z - info: Using extension version-control@4.1.0
+2025-04-09T19:35:13.002Z - info: Using extension assets@4.2.1
+2025-04-09T19:35:13.030Z - info: Using extension authorization@4.1.0
+2025-04-09T19:35:13.044Z - debug: Extension authorization@4.1.0 was disabled
+2025-04-09T19:35:13.045Z - info: Using extension browser-client@4.1.0
+2025-04-09T19:35:13.052Z - info: Using extension docx@4.7.0
+2025-04-09T19:35:13.057Z - info: Using extension html-to-xlsx@4.2.0
+2025-04-09T19:35:14.045Z - info: html-to-xlsx detected chrome as available html engine
+2025-04-09T19:35:14.046Z - info: Using extension pptx@4.4.0
+2025-04-09T19:35:14.060Z - info: Using extension scheduling@4.1.0
+2025-04-09T19:35:14.252Z - info: Using extension scripts@4.2.0
+2025-04-09T19:35:14.256Z - info: Using extension static-pdf@4.1.0
+2025-04-09T19:35:14.257Z - info: Using extension studio@4.3.0
+2025-04-09T19:35:14.664Z - info: Using extension xlsx@4.4.0
+2025-04-09T19:35:14.670Z - info: Using extension chrome-pdf@4.1.1
+2025-04-09T19:35:14.679Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-04-09T19:35:14.679Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-04-09T19:35:14.680Z - info: Using extension public-templates@4.0.0
+2025-04-09T19:35:14.713Z - debug: Extension public-templates@4.0.0 was disabled
+2025-04-09T19:35:14.713Z - info: Using extension sample-template@4.0.1
+2025-04-09T19:35:14.721Z - info: Using extension studio-theme-dark@4.0.0
+2025-04-09T19:35:14.725Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2025-04-09T19:35:14.725Z - warn: options.allowLocalFilesAccess is deprecated, use options.trustUserCode instead
+2025-04-09T19:35:14.726Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-04-09T19:35:14.727Z - info: Using fs provider for template store.
+2025-04-09T19:35:14.733Z - info: fs store is persisting using fs for C:\projects2\jsreport-server\data
+2025-04-09T19:35:14.744Z - info: fs store is loading data
+2025-04-09T19:35:14.792Z - info: fs store is initialized successfully
+2025-04-09T19:35:14.797Z - debug: studio default theme is: light
+2025-04-09T19:35:14.811Z - info: Creating default express app.
+2025-04-09T19:35:14.904Z - info: jsreport server successfully started on http port: 5488
+2025-04-09T19:35:14.905Z - info: Verifying license key free
+2025-04-09T19:35:14.906Z - info: Using free license
+2025-04-09T19:35:14.910Z - info: Initializing worker threads
+2025-04-09T19:35:14.910Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-04-09T19:35:15.407Z - info: 2 worker threads initialized in 497ms
+2025-04-09T19:35:15.408Z - info: Starting temp files cleanup with 180000ms threshold
+2025-04-09T19:35:15.408Z - info: reporter initialized
+2025-04-09T19:35:18.753Z - debug: OData query on templates
+2025-04-09T19:35:18.780Z - debug: OData query on settings
+2025-04-09T19:35:18.794Z - debug: OData query on folders
+2025-04-09T19:35:18.826Z - debug: OData query on components
+2025-04-09T19:35:18.838Z - debug: OData query on data
+2025-04-09T19:35:18.849Z - debug: OData query on tags
+2025-04-09T19:35:18.861Z - debug: OData query on assets
+2025-04-09T19:35:18.870Z - debug: OData query on scripts
+2025-04-09T19:35:18.879Z - debug: OData query on schedules
+2025-04-09T19:35:18.964Z - debug: OData query on templates
+2025-04-09T19:35:18.990Z - debug: OData query on profiles
+2025-04-09T19:35:19.023Z - debug: OData query on profiles
+2025-04-09T19:35:19.039Z - debug: OData query on profiles
+2025-04-09T19:35:19.045Z - debug: OData query on profiles
+2025-04-09T19:35:19.063Z - debug: OData query on profiles
+2025-04-09T19:35:19.072Z - debug: OData query on profiles
+2025-04-09T19:35:19.079Z - debug: OData query on templates
+2025-04-09T19:35:23.104Z - debug: OData query on templates
+2025-04-09T19:35:25.508Z - info: Render request 1 queued for execution and waiting for available worker rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:25.552Z - info: Starting rendering request 1 rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:25.553Z - info: Rendering template { name: myTemplate, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:25.565Z - debug: Adding sample data HUavgV0Kc rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:25.572Z - debug: Base url not specified, skipping its injection. rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:25.576Z - debug: Rendering engine handlebars rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:26.608Z - debug: Executing recipe chrome-pdf rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.291Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.428Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/571ec454-7149-4921-b692-d6140fdeae51-chrome-pdf.html rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.471Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/571ec454-7149-4921-b692-d6140fdeae51-chrome-pdf.html rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.474Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.475Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.486Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.500Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:30.501Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:33.276Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:33.278Z - debug: Running chrome with params {"printBackground":true,"format":"A5","marginRight":"","height":"","marginTop":"","marginBottom":"","marginLeft":"","displayHeaderFooter":true,"width":"","timeout":57687,"margin":{"top":"","right":"","bottom":"","left":""}} rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:34.024Z - debug: Skipping storing report. rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:34.024Z - info: Rendering request 1 finished in 8520 ms rootId=da88odvxm18feaj, id=da88odvxm18feaj
+2025-04-09T19:35:38.511Z - info: Render request 2 queued for execution and waiting for available worker rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:38.534Z - info: Starting rendering request 2 rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:38.534Z - info: Rendering template { name: myTemplate, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:38.539Z - debug: Adding sample data HUavgV0Kc rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:38.545Z - debug: Base url not specified, skipping its injection. rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:38.546Z - debug: Rendering engine handlebars rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:39.276Z - debug: Executing recipe chrome-pdf rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.153Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.309Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/6c2a87e9-5205-4c7a-b5bf-7559c47df12a-chrome-pdf.html rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.339Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/6c2a87e9-5205-4c7a-b5bf-7559c47df12a-chrome-pdf.html rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.361Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.362Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.378Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.395Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.396Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.521Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.553Z - debug: Running chrome with params {"printBackground":true,"format":"A5","marginRight":"","height":"","marginTop":"","marginBottom":"","marginLeft":"","displayHeaderFooter":true,"width":"","timeout":58833,"margin":{"top":"","right":"","bottom":"","left":""}} rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.976Z - debug: Skipping storing report. rootId=se5dv350n6usx95, id=se5dv350n6usx95
+2025-04-09T19:35:40.976Z - info: Rendering request 2 finished in 2467 ms rootId=se5dv350n6usx95, id=se5dv350n6usx95
