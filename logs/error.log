@@ -1,0 +1,48 @@
+2025-04-09T14:07:45.477Z - error: Error when processing render request 69
+(because) protocol error (Page.printToPDF): invalid print parameters: content area is empty
+ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: content area is empty
+    at <instance_members_initializer> (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage.createPDFStream (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:798:63)
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:391:16
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:432:22 rootId=97qcufp1a72vej5, id=97qcufp1a72vej5
+2025-04-09T14:07:45.477Z - error: Rendering request 69 finished with error in 242 ms rootId=97qcufp1a72vej5, id=97qcufp1a72vej5
+2025-04-09T14:07:55.453Z - error: Error when processing render request 70
+(because) protocol error (Page.printToPDF): invalid print parameters: content area is empty
+ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: content area is empty
+    at <instance_members_initializer> (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage.createPDFStream (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:798:63)
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:391:16
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:432:22 rootId=4iaxfrtvp1ks1rd, id=4iaxfrtvp1ks1rd
+2025-04-09T14:07:55.453Z - error: Rendering request 70 finished with error in 279 ms rootId=4iaxfrtvp1ks1rd, id=4iaxfrtvp1ks1rd
+2025-04-09T14:08:06.019Z - error: Error when processing render request 71
+(because) protocol error (Page.printToPDF): invalid print parameters: content area is empty
+ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: content area is empty
+    at <instance_members_initializer> (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage.createPDFStream (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:798:63)
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:391:16
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:432:22 rootId=hypvln1bghup3tn, id=hypvln1bghup3tn
+2025-04-09T14:08:06.019Z - error: Rendering request 71 finished with error in 186 ms rootId=hypvln1bghup3tn, id=hypvln1bghup3tn
+2025-04-09T14:08:29.444Z - error: Error when processing render request 72
+(because) protocol error (Page.printToPDF): invalid print parameters: content area is empty
+ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: content area is empty
+    at <instance_members_initializer> (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage.createPDFStream (C:\projects2\jsreport-server\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:798:63)
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:391:16
+    at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:432:22 rootId=l62au533p40psfp, id=l62au533p40psfp
+2025-04-09T14:08:29.444Z - error: Rendering request 72 finished with error in 201 ms rootId=l62au533p40psfp, id=l62au533p40psfp

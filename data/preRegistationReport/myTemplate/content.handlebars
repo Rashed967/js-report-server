@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{examName}} Registration Receipt</title>
+    <style>
+
+
+
+        @font-face {
+            font-family: 'kalpurush';
+            src: url('http://localhost:5488/fonts/kalpurush.ttf') format('truetype');
+        }
+        body {
+            font-family: 'kalpurush', sans-serif;
+            /* margin: 30px;  */
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 1px solid black;
+            postion: relative;
+            top: 0;
+            left: 0;
+            padding-bottom: 8px;
+        }
+        .header img {
+            max-width: 50px;
+            position: absolute;
+            top: 45px;
+            left: 40px;
+        }
+        .header h1, h2, h3, h4, h5, h6, p{
+            margin: 0;
+            padding: 0;
+        }
+
+        .meta-box-title{
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .meta-box{
+            border: 1px solid black;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 11px;
+
+        }
+        .name-address-box{
+            margin-top: 25px;
+            margin-bottom: 0px;
+             font-size: 11px;
+        }
+
+      
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .exam-details {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .exam-details th, .exam-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .signature{
+          position: absolute;
+          bottom : 40px;
+          right: 40px;
+          font-size: 12px;
+          border-top: 0.5px solid black;
+          padding-top: 5px;
+        }
+        .page {
+  width: 148mm; /* A5 width */
+  height: 210mm; /* A5 height */
+  padding: 5mm 7mm;
+  position: relative;
+  box-sizing: border-box;
+}
+    </style>
+</head>
+<body style="page-break-inside: avoid;">
+
+   <div class="page ">
+     <div class="header">
+        <img  src="{{boardInfo.logo}}" alt="Board Logo">
+        <h2 style="font-size: 14px; font-weight: normal">
+            <span>{{boardInfo.boardName.englishName}}</span>/
+            <span>{{boardInfo.boardName.arabicName}}</span>
+        </h2>
+        <h2 style="font-size: 16px">{{boardInfo.boardName.bengaliName}}</h2>
+        <p style="font-size: 11px">{{boardInfo.address}}</p>
+        <p style="font-size: 11px">
+          <span>{{boardInfo.contactNo1}} (অফিস)</span>
+          <span>{{boardInfo.contactNo2}} (পরীক্ষা বিভাগ)</span>
+        </p>
+        <p style="font-size: 12px">{{examName}}</p>
+    </div>
+
+    <div>
+        <h3  class="meta-box-title">নিবন্ধন ফি</h3>
+        <div class="meta-box">
+            <div>
+                <p>রশিদ : {{enToBnNumber registrationData.receiptNo}}</p>
+                <p>এন্ট্রি তারিখ : {{formatBnDate  registrationData.createdAt}}</p>
+            </div>
+            <div>
+                <p>কোড : {{enToBnNumber madrasahDetails.code}}</p>
+                <p>প্রিন্ট তারিখ : {{todayBnDate}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="name-address-box">
+        <p>মাদরাসা : {{madrasahDetails.name}}</p>
+        <p>ঠিকানা : {{madrasahDetails.address.village}},
+            {{madrasahDetails.address.district}},
+            {{madrasahDetails.address.division}}
+        </p>
+    </div>
+
+<table  border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-size: 12px; margin-top: 2px;">
+  <thead>
+    <tr>
+      <th rowspan="2">মারহালা</th>
+      <th>পরীক্ষার ধরন</th>
+      <th>পরীক্ষার্থী সংখ্যা</th>
+      <th>
+         {{#if ../isLateRegistrationFeeTaken}}
+            বিলম্ব ফি
+         {{else}}
+            নিবন্ধন ফি   
+        {{/if}}
+      </th>
+      <th>মোট ফি</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each registrationData.examineesPerMahala}}
+    <tr>
+      <td style="font-weight: bold" rowspan="2">{{this.marhala.name.bengaliName}}</td>
+      <td>নিয়মিত</td>
+      <td>{{debugEnToBn this.regularExamineesSlots}}</td>
+      <td>
+        {{#if ../isLateRegistrationFeeTaken}}
+          {{debugEnToBn @root.registrationData.exam.lateRegistrationFeeForRegularStudent}}
+        {{else}}
+          {{debugEnToBn @root.registrationData.exam.registrationFeeForRegularStudent}}
+        {{/if}}
+      </td>
+
+      <td>
+        {{#if ../isLateRegistrationFeeTaken}}
+          {{multiplyBn this.regularExamineesSlots @root.registrationData.exam.lateRegistrationFeeForRegularStudent}}
+        {{else}}
+          {{multiplyBn this.regularExamineesSlots @root.registrationData.exam.registrationFeeForRegularStudent}}
+        {{/if}}
+      </td>
+    </tr>
+    <tr>
+      <td>অনিয়মিত</td>
+      <td>{{debugEnToBn this.irregularExamineesSlots}}</td>
+      <td>
+        {{#if ../isLateRegistrationFeeTaken}}
+          {{debugEnToBn @root.registrationData.exam.lateRegistrationFeeForIrregularStudent}}
+        {{else}}
+          {{debugEnToBn @root.registrationData.exam.registrationFeeForIrregularStudent}}
+        {{/if}}
+      </td>
+      <td>
+        {{#if ../isLateRegistrationFeeTaken}}
+{{multiplyBn this.irregularExamineesSlots @root.registrationData.exam.lateRegistrationFeeForIrregularStudent}}
+
+        {{else}}
+          {{multiplyBn this.irregularExamineesSlots @root.registrationData.exam.registrationFeeForIrregularStudent}}
+        {{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div class="signature">
+  <p>গ্রহীতার স্বাক্ষর</p>
+</div>
+
+<img style="position: absolute; width: 340px; z-index: -9999; top: 220px; left: 110px; opacity: 0.1" src="{{boardInfo.logo}}"></img>
+
+   </div>
+
+</body>
+</html>
