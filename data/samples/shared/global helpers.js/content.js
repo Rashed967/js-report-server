@@ -102,3 +102,112 @@ function multiplyBn(a, b) {
 
   return final;
 }
+
+
+function minusBn(a, b) {
+  if (typeof a !== 'number') a = parseFloat(a);
+  if (typeof b !== 'number') b = parseFloat(b);
+  const result = a - b;
+  return enToBnNumber(result);
+}
+
+
+
+
+// Helper function to convert number to Bengali words
+
+function numberToBengaliWords(number, isTaka = false) {
+  const units = [
+    '',
+    'এক',
+    'দুই',
+    'তিন',
+    'চার',
+    'পাঁচ',
+    'ছয়',
+    'সাত',
+    'আট',
+    'নয়'
+  ];
+  const teens = [
+    'দশ',
+    'এগার',
+    'বার',
+    'তের',
+    'চৌদ্দ',
+    'পনের',
+    'ষোল',
+    'সতের',
+    'আঠার',
+    'ঊনিশ'
+  ];
+  const tens = [
+    '',
+    'দশ',
+    'বিশ',
+    'ত্রিশ',
+    'চল্লিশ',
+    'পঞ্চাশ',
+    'ষাট',
+    'সত্তর',
+    'আশি',
+    'নব্বই'
+  ];
+  const scales = ['', 'হাজার', 'লক্ষ', 'কোটি'];
+
+  if (number === 0) return 'শূন্য';
+
+  function processGroup(n, scaleIndex) {
+    if (n === 0) return '';
+
+    let words = '';
+
+    if (n > 99) {
+      words += units[Math.floor(n / 100)] + 'শত ';
+      n %= 100;
+    }
+
+    if (n > 19) {
+      words += tens[Math.floor(n / 10)] + ' ';
+      if (n % 10 > 0) words += units[n % 10] + ' ';
+    } else if (n > 9) {
+      words += teens[n - 10] + ' ';
+    } else if (n > 0) {
+      words += units[n] + ' ';
+    }
+
+    if (scaleIndex > 0 && words !== '') {
+      words += scales[scaleIndex] + ' ';
+    }
+
+    return words;
+  }
+
+  let result = '';
+  let remaining = number;
+  let scaleIndex = 0;
+
+  while (remaining > 0) {
+    const group = remaining % 1000;
+    if (group > 0) {
+      result = processGroup(group, scaleIndex) + result;
+    }
+    remaining = Math.floor(remaining / 1000);
+    scaleIndex++;
+  }
+
+  if (isTaka) {
+    result += ' টাকা মাত্র';
+  }
+
+  return result.trim();
+}
+
+
+function getTotalExamineesSlots(examineesPerMahala) {
+  const totalExamineesSlots = examineesPerMahala.reduce((acc, current) => {
+    return acc + current.totalExamineesSlots;
+  }, 0);
+  return enToBnNumber(totalExamineesSlots);
+}
+

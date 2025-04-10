@@ -2,9 +2,10 @@
   "name": "jsreport-server",
   "dependencies": {
     "@jsreport/jsreport-handlebars": "^4.0.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
-    "puppeteer": "^19.0.0",
-    "jsreport": "^4.8.0"
+    "jsreport": "^4.8.0",
+    "puppeteer": "^19.0.0"
   },
   "version": "1.0.0",
   "main": "server.js",

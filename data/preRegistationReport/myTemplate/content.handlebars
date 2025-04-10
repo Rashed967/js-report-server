@@ -95,8 +95,7 @@
      <div class="header">
         <img  src="{{boardInfo.logo}}" alt="Board Logo">
         <h2 style="font-size: 14px; font-weight: normal">
-            <span>{{boardInfo.boardName.englishName}}</span>/
-            <span>{{boardInfo.boardName.arabicName}}</span>
+            <span>{{boardInfo.boardName.englishName}}</span>/<span>{{boardInfo.boardName.arabicName}}</span>
         </h2>
         <h2 style="font-size: 16px">{{boardInfo.boardName.bengaliName}}</h2>
         <p style="font-size: 11px">{{boardInfo.address}}</p>
@@ -133,7 +132,7 @@
   <thead>
     <tr>
       <th rowspan="2">মারহালা</th>
-      <th>পরীক্ষার ধরন</th>
+      <th>পরীক্ষার্থীর ধরন</th>
       <th>পরীক্ষার্থী সংখ্যা</th>
       <th>
          {{#if ../isLateRegistrationFeeTaken}}
@@ -187,8 +186,26 @@
       </td>
     </tr>
     {{/each}}
+    <tr>
+      <td style="font-weight: bold">মোট: </td>
+      <td></td>
+      <td>{{getTotalExamineesSlots registrationData.examineesPerMahala}}</td>
+      <td></td>
+      <td>{{enToBnNumber registrationData.transaction.totalAmount}}</td>
+    </tr>
   </tbody>
 </table>
+
+<div style="display: flex; justify-content: space-between; margin-top: 10px;">
+  <div>
+    <p style="font-size: 12px;">কথায়: {{numberToBengaliWords registrationData.transaction.paidAmount}}</p>
+  </div>
+
+  <div  style="font-size: 12px; width: 40%;">
+    <p style="display: flex; justify-content: space-between; border-bottom: 1px dashed black; margin-bottom: 3px "><span>পরিশোধিত:</span>  <span>{{enToBnNumber registrationData.transaction.paidAmount}}/-</span></p>
+    <p style="display: flex; justify-content: space-between; "><span>বাকি:</span>  <span>{{minusBn registrationData.transaction.totalAmount registrationData.transaction.paidAmount }}/-</span></p>
+  </div>
+</div>
 
 <div class="signature">
   <p>গ্রহীতার স্বাক্ষর</p>

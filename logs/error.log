@@ -46,3 +46,69 @@ ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: conte
     at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:391:16
     at async C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:432:22 rootId=l62au533p40psfp, id=l62au533p40psfp
 2025-04-09T14:08:29.444Z - error: Rendering request 72 finished with error in 201 ms rootId=l62au533p40psfp, id=l62au533p40psfp
+2025-04-10T12:09:43.705Z - error: Error when starting http server on port 5488 Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-10T12:09:43.706Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-10T12:10:08.074Z - error: Error when starting http server on port 5488 Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-10T12:10:08.075Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-10T12:10:23.354Z - error: Error when starting http server on port 5488 Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-10T12:10:23.355Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::5488
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
