@@ -134,13 +134,13 @@
       <th rowspan="2">মারহালা</th>
       <th>পরীক্ষার্থীর ধরন</th>
       <th>পরীক্ষার্থী সংখ্যা</th>
-      <th>
-         {{#if ../isLateRegistrationFeeTaken}}
-            বিলম্ব ফি
-         {{else}}
-            নিবন্ধন ফি   
-        {{/if}}
-      </th>
+     <th>
+   {{#if registrationData.isLateRegistrationFeeTaken}}
+      বিলম্ব নিবন্ধন ফি
+   {{else}}
+      নিবন্ধন ফি   
+   {{/if}}
+</th>
       <th>মোট ফি</th>
     </tr>
   </thead>
@@ -151,7 +151,7 @@
       <td>নিয়মিত</td>
       <td>{{debugEnToBn this.regularExamineesSlots}}</td>
       <td>
-        {{#if ../isLateRegistrationFeeTaken}}
+        {{#if @root.registrationData.isLateRegistrationFeeTaken}}
           {{debugEnToBn @root.registrationData.exam.lateRegistrationFeeForRegularStudent}}
         {{else}}
           {{debugEnToBn @root.registrationData.exam.registrationFeeForRegularStudent}}
@@ -159,7 +159,7 @@
       </td>
 
       <td>
-        {{#if ../isLateRegistrationFeeTaken}}
+        {{#if @root.registrationData.isLateRegistrationFeeTaken}}
           {{multiplyBn this.regularExamineesSlots @root.registrationData.exam.lateRegistrationFeeForRegularStudent}}
         {{else}}
           {{multiplyBn this.regularExamineesSlots @root.registrationData.exam.registrationFeeForRegularStudent}}
@@ -187,7 +187,7 @@
     </tr>
     {{/each}}
     <tr>
-      <td style="font-weight: bold">মোট: </td>
+      <td style="font-weight: bold">মোট </td>
       <td></td>
       <td>{{getTotalExamineesSlots registrationData.examineesPerMahala}}</td>
       <td></td>
@@ -198,7 +198,7 @@
 
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
   <div>
-    <p style="font-size: 12px;">কথায়: {{numberToBengaliWords registrationData.transaction.paidAmount}}</p>
+    <p style="font-size: 12px;">কথায়: {{numberToBengaliWords registrationData.transaction.totalAmount}}</p>
   </div>
 
   <div  style="font-size: 12px; width: 40%;">

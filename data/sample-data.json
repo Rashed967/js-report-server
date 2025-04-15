@@ -1,0 +1,10 @@
+{
+  "statusCode": 200,
+  "success": true,
+  "message": "Registered Examinees fetched successfully",
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total": 26
+  }
+} 

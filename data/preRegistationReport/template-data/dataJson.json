@@ -159,7 +159,7 @@
             "__v": 0,
             "id": "67f6832fbcf83c0db342c56b"
         },
-        "isLateRegistrationFeeTaken": true,
+        "isLateRegistrationFeeTaken": false,
         "receiptNo": 155,
         "isDeleted": false,
         "createdAt": "2025-04-09T14:24:47.517Z",
