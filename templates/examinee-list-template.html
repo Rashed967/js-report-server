@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>পরীক্ষার্থীদের তালিকা</title>
     <style>
+        @page {
+            size: A4 landscape;
+            margin: 1cm;
+        }
         @font-face {
             font-family: 'Kalpurush';
             src: url('/fonts/Kalpurush.ttf') format('truetype');
@@ -11,105 +15,154 @@
         body {
             font-family: 'Kalpurush', Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
+            font-size: 12px;
         }
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
         }
         .header img {
             width: 80px;
             height: auto;
         }
         .header h1 {
-            margin: 10px 0;
             font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .header h3 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: normal;
         }
         .header p {
-            margin: 5px 0;
-            font-size: 14px;
+            font-size: 16px;
+            margin: 0;
         }
         .madrasah-info {
-            margin-bottom: 20px;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
         }
         .madrasah-info p {
-            margin: 5px 0;
+            margin: 2px 0;
+            font-size: 14px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-bottom: 15px;
+            page-break-inside: auto;
+           
+        }
+        thead {
+            display: table-header-group;
+        }
+        tbody {
+            display: table-row-group;
+        }
+        tr {
+            page-break-inside: avoid;
         }
         th, td {
             border: 1px solid black;
-            padding: 8px;
+            padding: 4px 2px;
             text-align: center;
-            font-size: 12px;
+            font-size: 14px;
         }
         th {
-            background-color: #f2f2f2;
+            font-weight: bold;
         }
         .footer {
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 12px;
+            padding-top: 10px;
         }
         .footer p {
-            margin: 5px 0;
+            margin: 3px 0;
+            font-size: 15px;
+        }
+        .marhala-section {
+            page-break-before: always;
+        }
+        .marhala-section:first-of-type {
+            page-break-before: avoid;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="data:image/png;base64,{{logo}}" alt="লোগো">
-        <h1>জাতীয় দ্বীনি মাদরাসা শিক্ষাবোর্ড বাংলাদেশ</h1>
-        <p>অস্থায়ী কার্যালয়: ৩৪১/৫ টি টি রোড, পূর্ব রামপুরা, ঢাকা-১২১৯</p>
-        <p>পরীক্ষার্থীদের ফি জমা ফরম</p>
-        <p>{{exam.examName}} {{exam.examYear}}ই.</p>
-    </div>
+    {{#each marhalaGroups}}
+    <div class="marhala-section">
+        <div class="header" style="position: relative;">
+            <h1 style="margin: 0; padding: 0;">{{../boardInfo.boardName.bengaliName}}</h1>
+            <h3 style="margin: 0; padding: 0;">{{../boardInfo.address}}</h3>
+            <p style="margin: 0 0 3px; padding: 0; font-size: 18px; border-bottom: 1px solid black;  width: fit-content; ">পরীক্ষার্থীদের ফি জমা ফরম</p>
+            <p style="margin: 0; padding: 0; font-size: 20px; font-weight: 700;">{{../selectedExam.examName}}</p>
+            <!--  -->
+            <img style="position: absolute; top: 20px; left: 0;" src="{{../boardInfo.logo}}" alt="madrasah logo" style="width: 120px; height: auto;">
+        </div>
 
-    <div class="madrasah-info">
-        <p>কোড নং: {{madrasah.code}}</p>
-        <p>মারহালা: {{marhala.name.bengaliName}}</p>
-        <p>মাদরাসা: {{madrasah.madrasahNames.bengaliName}}, {{madrasah.address}}</p>
-        <p>মারকাজ: {{madrasah.code}}</p>
-    </div>
+        <div class="madrasah-info">
+            <!-- convert madrasah code to bengali number -->
+            <p>কোড নং: {{enToBnNumber ../madrasah.code}}</p>
+            <p>মারহালা: {{this.marhala.name.bengaliName}}</p>
+            <p>মাদরাসা: {{../madrasah.madrasahNames.bengaliName}}</p>
+            <p>মারকায: {{enToBnNumber ../madrasah.code}}</p>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ক্র.</th>
-                <th>নিবন্ধন নং</th>
-                <th>রোল নং</th>
-                <th>পরীক্ষার্থীর নাম</th>
-                <th>পরীক্ষার্থীর নাম (আরবি)</th>
-                <th>পিতার নাম</th>
-                <th>পিতার নাম (আরবি)</th>
-                <th>জন্ম তারিখ</th>
-                <th>পরী.ফি</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each examinees}}
-            <tr>
-                <td>{{add @index 1}}</td>
-                <td>{{this.registrationNumber}}</td>
-                <td>{{this.roll}}</td>
-                <td>{{this.examineeName.bengaliName}}</td>
-                <td>{{this.examineeName.arabicName}}</td>
-                <td>{{this.fatherName.bengaliName}}</td>
-                <td>{{this.fatherName.arabicName}}</td>
-                <td>{{formatDate this.birthDate}}</td>
-                <td></td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ক্র.</th>
+                    <th>নিবন্ধন নং</th>
+                    <th>রোল নং</th>
+                    <th style="width: 170px;">পরীক্ষার্থীর নাম</th>
+                    <th style="width: 170px;">পরীক্ষার্থীর নাম (আরবি)</th>
+                    <th style="width: 170px;">পিতার নাম</th>
+                    <th style="width: 170px;">পিতার নাম (আরবি)</th>
+                    <th style="width: 90px;">জন্ম তারিখ</th>
+                    <th style="width: 70px;">পরীক্ষা ফি</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.examinees}}
+                <tr>
+                    <!-- convert index to bengali number -->
+                    <td>{{enToBnNumber (add @index 1)}}</td>
+                    <!-- convert registrationNumber to bengali number -->
+                    <td>{{enToBnNumber this.registrationNumber}}</td>
+                    <!-- conver roll if is available -->
+                    <td>{{#if this.roll}}{{enToBnNumber this.roll}}{{/if}}</td>
+                    <td>{{this.examineeName.bengaliName}}</td>
+                    <td>{{this.examineeName.arabicName}}</td>
+                    <td>{{this.fatherName.bengaliName}}</td>
+                    <td>{{this.fatherName.arabicName}}</td>
+                    <td >{{formatDate this.birthDate}}</td>
+                    <td>
+                        {{#if (eq this.registrationType "নিয়মিত")}}
+                            {{../selectedExam.registrationFeeForRegularStudent}}
+                        {{else}}
+                            {{../selectedExam.registrationFeeForIrregularStudent}}
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
 
-    <div class="footer">
-        <p>মোট পরীক্ষার্থীর সংখ্যা: {{totalExaminees}}</p>
-        <p>মোট টাকা (অংকে): {{totalFee}}</p>
-        <p>বিঃ দ্রঃ ১। ফরমে পরীক্ষার্থীর কোন তথ্য অসম্পূর্ণ অথবা ত্রুটি পরিলক্ষিত হলে তা সংশোধন করুন</p>
-        <p>২। এ ফরমের ফটোকপি মাদরাসার নথিতে সংরক্ষণ করুন।</p>
+        <div class="footer">
+            <p >মোট পরীক্ষার্থীর সংখ্যা: ............... মোট টাকা (অংকে) ......................... (কথায়)</p>
+            <p style="font-weight: bold;">বিঃ দ্রঃ </p>
+            <p>১। ফরমে পরীক্ষার্থীর কোন তথ্য অসম্পূর্ণ অথবা ত্রুটি পরিলক্ষিত হলে তা সংশোধন করুন</p>
+            <p>২। এ ফরমের ফটোকপি মাদরাসার নথিতে সংরক্ষণ করুন।</p>
+        </div>
     </div>
+    {{/each}}
 </body>
 </html> 

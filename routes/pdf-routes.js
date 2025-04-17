@@ -82,25 +82,46 @@ router.post('/generate', async (req, res) => {
 router.post('/examinee-list', async (req, res) => {
   try {
     // Get data from request
-    const examinees = req.body;
-    console.log(examinees);
+    const { registeredExaminees, selectedExam, boardInfo, madrasah } = req.body;
+    console.log('Generating examinee list for exam:', selectedExam.examName);
     
-    if (!Array.isArray(examinees) || examinees.length === 0) {
+    if (!Array.isArray(registeredExaminees) || registeredExaminees.length === 0) {
       return res.status(400).json({
         success: false,
         message: 'Invalid or empty examinees data'
       });
     }
 
+    // Group examinees by marhala
+    const marhalaGroups = registeredExaminees.reduce((groups, examinee) => {
+      const marhalaId = examinee.marhala.id;
+      if (!groups[marhalaId]) {
+        groups[marhalaId] = {
+          marhala: examinee.marhala,
+          examinees: []
+        };
+      }
+      groups[marhalaId].examinees.push(examinee);
+      return groups;
+    }, {});
+
+    // Convert groups object to array and sort examinees by roll number
+    const marhalaGroupsArray = Object.values(marhalaGroups).map(group => ({
+      ...group,
+      examinees: group.examinees.sort((a, b) => {
+        const rollA = parseInt(a.roll) || 0;
+        const rollB = parseInt(b.roll) || 0;
+        return rollA - rollB;
+      })
+    }));
+
     // Prepare template data
     const templateData = {
-      examinees: examinees,
-      madrasah: examinees[0].madrasah,
-      marhala: examinees[0].marhala,
-      exam: examinees[0].exam,
-      totalExaminees: examinees.length,
-      totalFee: calculateTotalFee(examinees),
-      logo: await loadLogoAsBase64()
+      marhalaGroups: marhalaGroupsArray,
+      selectedExam,
+      boardInfo,
+      madrasah,
+      examName: selectedExam.examName
     };
 
     // Load template
@@ -126,7 +147,9 @@ router.post('/examinee-list', async (req, res) => {
           marginBottom: '1cm',
           marginLeft: '1cm',
           format: 'A4',
-          landscape: false
+          landscape: true,
+          displayHeaderFooter: false,
+          printBackground: true
         }
       },
       data: templateData

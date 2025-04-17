@@ -112,3 +112,14 @@ ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: conte
     at Object.start (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
     at Object.<anonymous> (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
     at async ListenerCollection.fire (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2025-04-16T05:02:17.895Z - error: Error occurred during reporter init: Error: options contain values that does not match the defined full root schema. schema validation errors: rootOptions.license should be object
+    at MainReporter.extensionsLoad (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:131:13)
+    at async MainReporter.init (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:179:7)
+2025-04-16T05:02:37.386Z - error: Error occurred during reporter init: Error: options contain values that does not match the defined full root schema. schema validation errors: rootOptions.license should be object
+    at MainReporter.extensionsLoad (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:131:13)
+    at async MainReporter.init (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:179:7)
+2025-04-16T05:56:56.693Z - error: Error when processing OData POST: /odata/assets Error: Entity name can not be empty
+    at module.exports (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at module.exports (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\validateEntityName.js:26:11)
+    at Object.insert (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\store\collection.js:123:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

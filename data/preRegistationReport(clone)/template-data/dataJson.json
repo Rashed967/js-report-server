@@ -1,0 +1,205 @@
+{
+    "registrationData": {
+        "_id": "67f6832fbcf83c0db342c56f",
+        "exam": {
+            "totalPreRegisteredExaminee": {
+                "boys": 0,
+                "girls": 0,
+                "total": 0
+            },
+            "totalRegisteredExaminee": {
+                "boys": 0,
+                "girls": 0,
+                "total": 0
+            },
+            "_id": "67cbf9987cd6e21523deaba5",
+            "examName": "পরীক্ষা-33",
+            "endRegistrationDate": "2025-03-12T00:00:00.000Z",
+            "registrationStartNumber": 10001,
+            "currentRegistrationNumber": 0,
+            "preExamineeRegistrations": [],
+            "mumtahins": [],
+            "totalMumtahin": 0,
+            "passRate": 0,
+            "resultPublicationDate": null,
+            "registrationFeeForRegularStudent": 350,
+            "registrationFeeForIrregularStudent": 450,
+            "lateRegistrationFeeForRegularStudent": 650,
+            "lateRegistrationFeeForIrregularStudent": 750,
+            "examFeeForBoys": [
+                {
+                    "marhala": "67bb2b6a59205df20f270116",
+                    "examFeeForRegularStudent": 450,
+                    "examFeeForIrregularStudent": 550,
+                    "lateExamFeeForRegularStudent": 650,
+                    "lateExamFeeForIrregularStudent": 750,
+                    "startRollNumber": 20001,
+                    "currentRollNumber": 0,
+                    "_id": "67cbf9987cd6e21523deaba6",
+                    "id": "67cbf9987cd6e21523deaba6"
+                }
+            ],
+            "examFeeForGirls": [],
+            "registeredExaminees": [],
+            "isDeleted": false,
+            "isCompleted": false,
+            "createdAt": "2025-03-08T08:02:32.664Z",
+            "updatedAt": "2025-03-08T08:02:32.664Z",
+            "id": "67cbf9987cd6e21523deaba5"
+        },
+        "madrasah": "67b960196d1acac57685bf25",
+        "examineesPerMahala": [
+            {
+                "marhala": {
+                    "name": {
+                        "bengaliName": "হিফজুল কুরআন",
+                        "arabicName": ""
+                    },
+                    "_id": "67bb2b6a59205df20f270116",
+                    "code": 202,
+                    "listOfKitabs": [
+                        "67bb2b3859205df20f2700fc"
+                    ],
+                    "marhalaType": "boys",
+                    "marhalaCategory": "hifz",
+                    "isDeleted": false,
+                    "createdAt": "2025-02-23T14:06:34.342Z",
+                    "updatedAt": "2025-02-26T07:25:17.685Z",
+                    "level": 2,
+                    "id": "67bb2b6a59205df20f270116"
+                },
+                "regularExamineesSlots": 5,
+                "irregularExamineesSlots": 4,
+                "remainingRegularExamineesSlots": 5,
+                "remainingIrregularExamineesSlots": 4,
+                "startingRegistrationNumber": 10001,
+                "endingRegistrationNumber": 10009,
+                "_id": "67f6832fbcf83c0db342c570",
+                "id": "67f6832fbcf83c0db342c570",
+                "marhalaName": "হিফজুল কুরআন",
+                "totalExamineesSlots": 9
+            },
+            {
+                "marhala": {
+                    "name": {
+                        "bengaliName": "ফযীলত",
+                        "arabicName": "الفضيلة"
+                    },
+                    "_id": "67bc784fcdb1ae4bc0c8e12f",
+                    "code": 203,
+                    "listOfKitabs": [
+                        "67bc6b4c5275e1ca1af0014f"
+                    ],
+                    "marhalaType": "boys",
+                    "marhalaCategory": "darsiyat",
+                    "isDeleted": false,
+                    "createdAt": "2025-02-24T13:46:55.446Z",
+                    "updatedAt": "2025-02-26T07:25:28.386Z",
+                    "level": 7,
+                    "id": "67bc784fcdb1ae4bc0c8e12f"
+                },
+                "regularExamineesSlots": 3,
+                "irregularExamineesSlots": 3,
+                "remainingRegularExamineesSlots": 3,
+                "remainingIrregularExamineesSlots": 3,
+                "startingRegistrationNumber": 10010,
+                "endingRegistrationNumber": 10015,
+                "_id": "67f6832fbcf83c0db342c571",
+                "id": "67f6832fbcf83c0db342c571",
+                "marhalaName": "ফযীলত",
+                "totalExamineesSlots": 6
+            },
+            {
+                "marhala": {
+                    "name": {
+                        "bengaliName": "মিশকাত",
+                        "arabicName": ""
+                    },
+                    "_id": "67bea30b7a7f88be783c74be",
+                    "code": 204,
+                    "level": 5,
+                    "listOfKitabs": [],
+                    "marhalaType": "boys",
+                    "marhalaCategory": "darsiyat",
+                    "isDeleted": false,
+                    "createdAt": "2025-02-26T05:13:47.305Z",
+                    "updatedAt": "2025-02-26T07:25:06.156Z",
+                    "id": "67bea30b7a7f88be783c74be"
+                },
+                "regularExamineesSlots": 2,
+                "irregularExamineesSlots": 1,
+                "remainingRegularExamineesSlots": 2,
+                "remainingIrregularExamineesSlots": 1,
+                "startingRegistrationNumber": 10016,
+                "endingRegistrationNumber": 10018,
+                "_id": "67f6832fbcf83c0db342c572",
+                "id": "67f6832fbcf83c0db342c572",
+                "marhalaName": "মিশকাত",
+                "totalExamineesSlots": 3
+            }
+        ],
+        "transaction": {
+            "_id": "67f6832fbcf83c0db342c56b",
+            "totalAmount": 7100,
+            "paidAmount": 7100,
+            "transactionType": "income",
+            "transactionCategory": "registrationFee",
+            "description": "",
+            "paymentDetails": [
+                {
+                    "amount": 7100,
+                    "paymentMethod": "mobile_banking",
+                    "paymentDate": "2025-04-09T00:00:00.000Z",
+                    "referenceNumber": ""
+                }
+            ],
+            "isDeleted": false,
+            "createdAt": "2025-04-09T14:24:47.352Z",
+            "updatedAt": "2025-04-09T14:24:47.352Z",
+            "__v": 0,
+            "id": "67f6832fbcf83c0db342c56b"
+        },
+        "isLateRegistrationFeeTaken": false,
+        "receiptNo": 155,
+        "isDeleted": false,
+        "createdAt": "2025-04-09T14:24:47.517Z",
+        "updatedAt": "2025-04-09T14:24:47.517Z",
+        "__v": 0,
+        "id": "67f6832fbcf83c0db342c56f",
+        "transactionDetails": {
+            "totalAmount": 0,
+            "paidAmount": 0
+        }
+    },
+    "boardInfo": {
+        "boardName": {
+            "bengaliName": "জাতীয় দ্বীনি মাদরাসা শিক্ষাবোর্ড বাংলাদেশ",
+            "englishName": "wifaqul madarisiddiniya bangladesh",
+            "arabicName": "وفاق المدارس الدينية بنغلاديش"
+        },
+        "_id": "67bb52249fbe4879db797d88",
+        "contactNo1": "01841-419005",
+        "contactNo2": "01841-419003",
+        "email": "info@madrasaboard.gov.bd",
+        "address": "অস্থায়ী কার্যালয় : ৩৪১/৫ টি ভি রোড, পূর্ব রামপুরা, ঢাকা-১২১৯",
+        "registrationNo": "BD-MEB-2024-001",
+        "logo": "https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg",
+        "foundationYear": "1978",
+        "founder": "Maulana Abdul Karim",
+        "chairman": "Dr. Mohammad Yusuf",
+        "secretary": "Maulana Abdul Mannan",
+        "examController": "Shafiqur Rahman",
+        "examControllerContactNo": "+8801711122233"
+    },
+    "examName": "পরীক্ষা-33",
+    "preRegistrationFee": 0,
+    "madrasahDetails": {
+        "name": "আল জামিয়াতুল ইসলামিয়া ইদারাতুল উলূম, আফতাবনগর মাদরাসা",
+        "code": "10002",
+        "address": {
+            "village": "জহুরুল ইসলাম সিটি",
+            "district": "ঢাকা",
+            "division": "ঢাকা"
+        }
+    }
+}
