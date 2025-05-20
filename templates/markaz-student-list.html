@@ -160,51 +160,77 @@
   {{#each allMarkaz}}
     <div class="markaz-section">
       <div class="markaz-header">
-        <span class="markaz-label"></span> <span class="markaz-code">{{code}} :</span>
+        <span class="markaz-label"></span> <span class="markaz-code">{{enToBnNumber code}} :</span>
         <span class="markaz-label"></span> <span class="markaz-name">{{markazMadrasah.[0].madrasahNames.bengaliName}}</span>
         <span class="markaz-label">ঠিকানা:</span> <span class="markaz-address">{{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</span>
       </div>
       <table class="markaz-madrasah-table">
         <thead>
           <tr>
-            <th>ক্র.</th>
-            <th>মাদ্রাসার নাম</th>
-            <th>ইলহাক নম্বর</th>
-            <th>মোট ছাত্র সংখ্যা</th>
-            <!-- marhala names from exam fee for boyes -->
-            {{#each ../exam.examFeeForBoys}}
-              <th>{{lookup ../marhalaNameMap marhala}}</th>
-            {{/each}}
+            <th id="serial-number">ক্র.</th>
+            <th id="madrasah-name">মাদ্রাসার নাম</th>
+            <th id="ilhakNo">ইলহাক নম্বর</th>
+            <th id="total-students">মোট ছাত্র সংখ্যা</th>
+            {{#if (eq ../madrasahType "বালক")}}
+              {{#each ../exam.examFeeForBoys}}
+                <th>{{this.marhala.name.bengaliName}}</th>
+              {{/each}}
+            {{else}}
+              {{#each ../exam.examFeeForGirls}}
+                <th>{{this.marhala.name.bengaliName}}</th>
+              {{/each}}
+            {{/if}}
           </tr>
         </thead>
         <tbody>
           {{#each allMadrasahWithDetails}}
             <tr>
-              <td id="serial-number">{{inc @index}}</td>
+              <td id="serial-number">{{enToBnNumber (inc @index)}}</td>
               <td id="madrasah-name">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</td>
               <td id="ilhakNo">{{enToBnNumber code}}</td>
-              <td id="total-students">{{muhtamim.[0].name}}</td>
-              {{#each ../../exam.examFeeForBoys}}
-                <td>
-                  {{#with (getMarhalaStats ../regesteredexamines marhala)}}
-                    {{enToBnNumber count}}<br>
-                    {{#if rollRanges}}
-                      {{#each rollRanges}}
-                        {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
-                      {{/each}}
-                    {{/if}}
-                  {{/with}}
-                </td>
-              {{/each}}
+              <td id="total-students">{{enToBnNumber (lookup madrasah_information.[0] 'totalStudents')}}</td>
+              {{#if (eq ../../madrasahType "বালক")}}
+                {{#each ../../exam.examFeeForBoys}}
+                  <td>
+                    {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
+                      {{enToBnNumber count}}<br>
+                      {{#if rollRanges}}
+                        {{#each rollRanges}}
+                          {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                        {{/each}}
+                      {{/if}}
+                    {{/with}}
+                  </td>
+                {{/each}}
+              {{else}}
+                 {{#each ../../exam.examFeeForGirls}}
+                  <td>
+                    {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
+                      {{enToBnNumber count}}<br>
+                      {{#if rollRanges}}
+                        {{#each rollRanges}}
+                          {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                        {{/each}}
+                      {{/if}}
+                    {{/with}}
+                  </td>
+                {{/each}}
+              {{/if}}
             </tr>
           {{/each}}
         </tbody>
         <tfoot>
           <tr>
             <td colspan="4" class="total-label">মোট পরীক্ষার্থী</td>
-            {{#each ../exam.examFeeForBoys}}
-              <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails marhala)}}</td>
-            {{/each}}
+            {{#if (eq ../madrasahType "বালক")}}
+              {{#each ../exam.examFeeForBoys}}
+                <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails this.marhala._id)}}</td>
+              {{/each}}
+            {{else}}
+              {{#each ../exam.examFeeForGirls}}
+                <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails this.marhala._id)}}</td>
+              {{/each}}
+            {{/if}}
           </tr>
         </tfoot>
       </table>
