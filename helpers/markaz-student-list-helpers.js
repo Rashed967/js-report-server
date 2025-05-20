@@ -120,7 +120,7 @@ const prepareMarkazStudentListData = (data) => {
   const marhalaOrder = {
     'আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা': 1,
     'ফযীলত (স্নাতক)': 2, // Corrected name
-    'সানাবিয়্যাতুল উলইয়া': 3,
+    'সানাবিয়াতুল উলইয়া': 3,
     'মুতাওয়াসসিতাহ (৮ম শ্রেণী)': 4, // Corrected name
     'ইবতেদাইয়্যাহ (৫ম শ্রেণী)': 5,
     'নাজেরা': 6, // Placing Nazera and Kiat before Hifz as per latest image/request order
