@@ -133,6 +133,11 @@
   font-weight: bold;
   background: #f9f9f9;
 }
+
+.marhala-cell{
+  width: 75px;
+}
+
 @media print {
   .page-header { page-break-after: avoid; }
   .markaz-section { page-break-inside: avoid; }
@@ -207,40 +212,40 @@
               {{#if (eq ../../madrasahType "বালক")}}
                   {{!-- Data cells for Kitab Vibhag marhalas counts --}}
                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ফযীলত (স্নাতক)"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "সানাবিয়াতুল উলইয়া"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৮ম শ্রেণী)"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইবতেদাইয়্যাহ (৫ম শ্রেণী)"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
 
                   {{!-- Data cell for Ilmut Tajweed Wal Qiraat count --}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইলমুত তাজবীদ ওয়াল কিরাআত"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
 
                   {{!-- Data cells for Hifz marhalas counts --}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন পূর্ণ"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ২০পারা"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ১০পারা"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
 
                   {{!-- Data cells for Nazera and Kiat counts--}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "নাজেরা"))}}
-                    <td>{{#if count}}{{enToBnNumber count}}{{/if}}</td>
+                    <td class="marhala-cell">{{#if count}}{{enToBnNumber count}}{{/if}}</td>
                   {{/with}}
 
               {{else}}
