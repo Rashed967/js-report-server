@@ -173,7 +173,21 @@
             <th id="total-students">মোট ছাত্র সংখ্যা</th>
             {{#if (eq ../madrasahType "বালক")}}
               {{#each ../exam.examFeeForBoys}}
+                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন পূর্ণ')}}
+                <th>৩০</th>
+                {{else}}
+                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ২০পারা')}}
+                <th>২০</th>
+                {{else}}
+                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ১০পারা')}}
+                <th>১০</th>
+                {{else}}
                 <th>{{this.marhala.name.bengaliName}}</th>
+                {{/if}}
+                {{/if}}
+                {{/if}}
+
+
               {{/each}}
             {{else}}
               {{#each ../exam.examFeeForGirls}}
