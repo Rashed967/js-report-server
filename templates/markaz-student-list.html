@@ -203,7 +203,7 @@
               <td id="serial-number">{{enToBnNumber (inc @index)}}</td>
               <td id="madrasah-name">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</td>
               <td id="ilhakNo">{{enToBnNumber code}}</td>
-              <td id="total-students">{{enToBnNumber (lookup madrasah_information.[0] 'totalStudents')}}</td>
+              <td id="total-examinees">{{enToBnNumber regesteredexamines.length}}</td>
               {{#if (eq ../../madrasahType "বালক")}}
                   {{!-- Data cells for Kitab Vibhag marhalas --}}
                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা"))}}

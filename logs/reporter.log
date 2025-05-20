@@ -27408,3 +27408,78 @@ Error: Error when evaluating engine handlebars for template anonymous
 2025-05-20T10:15:24.635Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
 2025-05-20T10:15:24.638Z - debug: Discovered 36 extensions
 2025-05-20T10:15:24.684Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-20T10:15:24.686Z - info: Using extension authentication@4.2.3
+2025-05-20T10:15:24.999Z - debug: Extension authentication@4.2.3 was disabled
+2025-05-20T10:15:25.000Z - info: Using extension base@4.0.0
+2025-05-20T10:15:25.005Z - info: Using extension child-templates@4.1.0
+2025-05-20T10:15:25.008Z - info: Using extension cli@4.1.0
+2025-05-20T10:15:25.012Z - info: Using extension components@4.0.2
+2025-05-20T10:15:25.014Z - info: Using extension data@4.1.0
+2025-05-20T10:15:25.016Z - info: Using extension express@4.2.0
+2025-05-20T10:15:25.626Z - info: Using extension freeze@4.0.0
+2025-05-20T10:15:25.629Z - info: Using extension fs-store@4.1.0
+2025-05-20T10:15:25.913Z - debug: Extension fs-store@4.1.0 was disabled
+2025-05-20T10:15:25.914Z - info: Using extension handlebars@4.0.1
+2025-05-20T10:15:25.916Z - info: Using extension import-export@4.0.6
+2025-05-20T10:15:25.934Z - info: Using extension jsrender@4.0.0
+2025-05-20T10:15:25.937Z - info: Using extension licensing@4.0.4
+2025-05-20T10:15:25.991Z - info: Using extension localization@4.0.1
+2025-05-20T10:15:25.993Z - info: Using extension npm@4.0.0
+2025-05-20T10:15:25.999Z - info: Using extension pdf-utils@4.3.0
+2025-05-20T10:15:26.001Z - info: Using extension reports@4.1.3
+2025-05-20T10:15:26.006Z - info: Using extension tags@4.0.1
+2025-05-20T10:15:26.009Z - info: Using extension text@4.0.2
+2025-05-20T10:15:26.011Z - info: Using extension version-control@4.1.0
+2025-05-20T10:15:26.026Z - info: Using extension assets@4.2.1
+2025-05-20T10:15:26.041Z - info: Using extension authorization@4.1.0
+2025-05-20T10:15:26.047Z - debug: Extension authorization@4.1.0 was disabled
+2025-05-20T10:15:26.048Z - info: Using extension browser-client@4.1.0
+2025-05-20T10:15:26.051Z - info: Using extension docx@4.7.0
+2025-05-20T10:15:26.057Z - info: Using extension html-to-xlsx@4.2.0
+2025-05-20T10:15:26.370Z - info: html-to-xlsx detected chrome as available html engine
+2025-05-20T10:15:26.371Z - info: Using extension pptx@4.4.0
+2025-05-20T10:15:26.373Z - info: Using extension scheduling@4.1.0
+2025-05-20T10:15:26.400Z - info: Using extension scripts@4.2.0
+2025-05-20T10:15:26.403Z - info: Using extension static-pdf@4.1.0
+2025-05-20T10:15:26.405Z - info: Using extension studio@4.3.0
+2025-05-20T10:15:26.541Z - info: Using extension xlsx@4.4.0
+2025-05-20T10:15:26.544Z - info: Using extension chrome-pdf@4.1.1
+2025-05-20T10:15:26.547Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-05-20T10:15:26.548Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-05-20T10:15:26.550Z - info: Using extension public-templates@4.0.0
+2025-05-20T10:15:26.552Z - debug: Extension public-templates@4.0.0 was disabled
+2025-05-20T10:15:26.553Z - info: Using extension sample-template@4.0.1
+2025-05-20T10:15:26.557Z - info: Using extension studio-theme-dark@4.0.0
+2025-05-20T10:15:26.559Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-05-20T10:15:26.560Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-05-20T10:15:26.575Z - debug: studio default theme is: light
+2025-05-20T10:15:26.579Z - info: Creating default express app.
+2025-05-20T10:15:26.602Z - info: jsreport server successfully started on http port: 5488
+2025-05-20T10:15:26.606Z - info: Verifying license key free
+2025-05-20T10:15:26.607Z - info: Using free license
+2025-05-20T10:15:26.616Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-05-20T10:15:26.617Z - info: Migration successful
+2025-05-20T10:15:26.618Z - debug: Creating samples is disabled
+2025-05-20T10:15:26.619Z - info: Initializing worker threads
+2025-05-20T10:15:26.620Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-05-20T10:15:27.697Z - info: 2 worker threads initialized in 1078ms
+2025-05-20T10:15:27.698Z - info: Starting temp files cleanup with 180000ms threshold
+2025-05-20T10:15:27.699Z - info: reporter initialized
+2025-05-20T10:15:28.470Z - info: Render request 1 queued for execution and waiting for available worker rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:28.483Z - info: Starting rendering request 1 rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:28.484Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:28.484Z - debug: Inline data specified. rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:28.486Z - debug: Base url not specified, skipping its injection. rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:28.488Z - debug: Rendering engine handlebars rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:29.041Z - debug: Executing recipe chrome-pdf rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:29.956Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.129Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/ae9b2c3a-c8a8-4c2c-b30c-d3fc6dbcbc9b-chrome-pdf.html rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.153Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/ae9b2c3a-c8a8-4c2c-b30c-d3fc6dbcbc9b-chrome-pdf.html rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.155Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.156Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.157Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.158Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.292Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.319Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59415,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.848Z - debug: Skipping storing report. rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
+2025-05-20T10:15:30.848Z - info: Rendering request 1 finished in 2381 ms rootId=hyo1jt0huqg7ux7, id=hyo1jt0huqg7ux7
