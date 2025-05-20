@@ -313,7 +313,9 @@
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="4" class="total-label">মোট পরীক্ষার্থী</td>
+            <td colspan="3" class="total-label">মোট পরীক্ষার্থী</td>
+            <!-- total regestered examines for all madrasah in a markaz -->
+            <td>{{enToBnNumber (sumMarhalaCounts marhalaTotalCounts)}}</td>
             {{#if (eq ../madrasahType "বালক")}}
               {{!-- Footer cells for Kitab Vibhag marhalas --}}
                <td>{{#with (lookup marhalaTotalCounts (lookup ../exam.marhalaIdMap "আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা"))}}{{#if this}}{{enToBnNumber this}}{{else}}{{enToBnNumber 0}}{{/if}}{{/with}}</td>

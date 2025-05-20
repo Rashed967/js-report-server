@@ -5,8 +5,11 @@
 const express = require('express');
 const router = express.Router();
 const { loadTemplate, prepareData } = require('../../helpers/pdf-helpers');
-const { prepareMarkazStudentListData } = require('../../helpers/markaz-student-list-helpers');
+const { prepareMarkazStudentListData, sumMarhalaCounts } = require('../../helpers/markaz-student-list-helpers');
 const handlebars = require('handlebars'); // Require handlebars locally
+
+// Register the sumMarhalaCounts helper
+handlebars.registerHelper('sumMarhalaCounts', sumMarhalaCounts);
 
 /**
  * Route: Generate Markaz List with Student List PDF

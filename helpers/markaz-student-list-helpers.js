@@ -44,6 +44,12 @@ const getMarhalaStats = (examinees, marhalaId) => {
   return { count, rollRanges };
 };
 
+// Helper function to sum all marhala counts
+const sumMarhalaCounts = (marhalaTotalCounts) => {
+  if (!marhalaTotalCounts) return 0;
+  return Object.values(marhalaTotalCounts).reduce((sum, count) => sum + count, 0);
+};
+
 // Get total marhala count for all madrasahs under a markaz
 const getTotalMarhalaCount = (allMadrasahWithDetails, marhalaId) => {
   if (!Array.isArray(allMadrasahWithDetails)) return 0;
@@ -138,6 +144,8 @@ const prepareMarkazStudentListData = (data) => {
 
   // Ensure regesteredexamines exists for all madrasahs
   if (Array.isArray(data.allMarkaz)) {
+    let grandTotalExaminees = 0; // Initialize grand total
+
     data.allMarkaz.forEach(markaz => {
       if (Array.isArray(markaz.allMadrasahWithDetails)) {
         // Ensure regesteredexamines exists for all madrasahs and initialize marhala total counts
@@ -148,16 +156,19 @@ const prepareMarkazStudentListData = (data) => {
             madrasah.regesteredexamines = [];
           }
 
-          // Aggregate examinee counts per marhala for this markaz
+          // Aggregate examinee counts per marhala for this markaz and add to grand total
           madrasah.regesteredexamines.forEach(examinee => {
             const marhalaId = examinee.marhala;
             if (marhalaId) {
               markaz.marhalaTotalCounts[marhalaId] = (markaz.marhalaTotalCounts[marhalaId] || 0) + 1;
             }
           });
+          grandTotalExaminees += madrasah.regesteredexamines.length; // Add madrasah total to grand total
         });
       }
     });
+
+    data.grandTotalExaminees = grandTotalExaminees; // Add grand total to the data object
   }
 
   // Sort marhalas based on the defined order for potential future use or verification
@@ -179,4 +190,5 @@ module.exports = {
   getTotalMarhalaCount,
   prepareMarkazStudentListData,
   marhalaNameMap,
+  sumMarhalaCounts,
 };
