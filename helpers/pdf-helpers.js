@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const markazStudentListHelpers = require('./markaz-student-list-helpers'); // Require the specific helpers file
 
 /**
  * Loads a template file
@@ -32,6 +33,11 @@ const loadPartial = (partialName) => {
 const registerHelpers = (handlebars) => {
   // Register partials
   handlebars.registerPartial('header', loadPartial('header'));
+
+  // Register markaz-student-list specific helpers
+  handlebars.registerHelper('getMarhalaStats', markazStudentListHelpers.getMarhalaStats);
+  handlebars.registerHelper('getTotalMarhalaCount', markazStudentListHelpers.getTotalMarhalaCount);
+  handlebars.registerHelper('marhalaNameMap', markazStudentListHelpers.marhalaNameMap);
 
   // Format date helper
   handlebars.registerHelper('formatDate', function(date) {
@@ -179,59 +185,16 @@ const registerHelpers = (handlebars) => {
   });
 
   // Marhala name map: expects exam object in root context
-  handlebars.registerHelper('marhalaNameMap', function(exam) {
-    const map = {};
-    if (exam && Array.isArray(exam.examFeeForBoys)) {
-      exam.examFeeForBoys.forEach(fee => {
-        if (fee.marhala && exam.marhalaNames && exam.marhalaNames[fee.marhala]) {
-          map[fee.marhala] = exam.marhalaNames[fee.marhala];
-        }
-      });
-    }
-    return map;
-  });
+  // Moved to markaz-student-list-helpers.js
+  // const marhalaNameMap = (exam) => { ... };
 
   // Get marhala stats: count and roll ranges for a madrasah's regesteredexamines
-  handlebars.registerHelper('getMarhalaStats', function(regesteredexamines, marhalaId) {
-    if (!Array.isArray(regesteredexamines)) return { count: 0, rollRanges: [] };
-    // Filter examinees for this marhala
-    const filtered = regesteredexamines.filter(e => e.marhala === marhalaId);
-    if (filtered.length === 0) return { count: 0, rollRanges: [] };
-    // Sort by roll (as number)
-    const sorted = filtered.slice().sort((a, b) => Number(a.roll) - Number(b.roll));
-    // Find roll ranges (consecutive)
-    const rollRanges = [];
-    let start = null, end = null;
-    for (let i = 0; i < sorted.length; i++) {
-      const roll = Number(sorted[i].roll);
-      if (start === null) {
-        start = roll;
-        end = roll;
-      } else if (roll === end + 1) {
-        end = roll;
-      } else {
-        rollRanges.push({ start, end });
-        start = roll;
-        end = roll;
-      }
-    }
-    if (start !== null) {
-      rollRanges.push({ start, end });
-    }
-    return { count: filtered.length, rollRanges };
-  });
+  // Moved to markaz-student-list-helpers.js
+  // const getMarhalaStats = (regesteredexamines, marhalaId) => { ... };
 
   // Get total marhala count for all madrasahs under a markaz
-  handlebars.registerHelper('getTotalMarhalaCount', function(allMadrasahWithDetails, marhalaId) {
-    if (!Array.isArray(allMadrasahWithDetails)) return 0;
-    let total = 0;
-    allMadrasahWithDetails.forEach(madrasah => {
-      if (Array.isArray(madrasah.regesteredexamines)) {
-        total += madrasah.regesteredexamines.filter(e => e.marhala === marhalaId).length;
-      }
-    });
-    return total;
-  });
+  // Moved to markaz-student-list-helpers.js
+  // const getTotalMarhalaCount = (allMadrasahWithDetails, marhalaId) => { ... };
 };
 
 /**
@@ -240,117 +203,32 @@ const registerHelpers = (handlebars) => {
  * @returns {Object} - Processed data for template
  */
 const prepareData = (data) => {
-  return {
-    ...data,
-    now: new Date()
-  };
+  // Apply specific data preparation based on template
+  if (data && data.template === 'markaz-student-list.html') {
+    // Call the specific data preparation function for markaz-student-list
+    return markazStudentListHelpers.prepareMarkazStudentListData(data);
+  }
+  return { ...data, now: new Date() };
 };
 
 /**
  * Prepares data for markaz-student-list template
  * Adds marhalaNames map to exam, ensures regesteredexamines arrays exist
  * and orders marhalas in a fixed sequence
+ * Moved to markaz-student-list-helpers.js
  * @param {Object} data
  * @returns {Object}
  */
-const prepareMarkazStudentListData = (data) => {
-  // Build marhalaNames map (marhalaId -> name) and marhalaIdMap (name -> id)
-  const marhalaNames = {};
-  const marhalaIdMap = {};
-  if (Array.isArray(data.allMarkaz)) {
-    data.allMarkaz.forEach(markaz => {
-      if (Array.isArray(markaz.marhala)) {
-        markaz.marhala.forEach(m => {
-          if (m._id && m.name && m.name.bengaliName) {
-            marhalaNames[m._id] = m.name.bengaliName;
-            marhalaIdMap[m.name.bengaliName] = m._id;
-          }
-        });
-      }
-    });
-  }
-
-  // Define fixed order for marhalas
-  const marhalaOrder = {
-    'আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা': 1,
-    'ফযীলত (মাতব)': 2,
-    'সানাবিয়্যাতুল উলইয়া': 3,
-    'মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)': 4,
-    'ইবতেদাইয়্যাহ (৫ম শ্রেণী)': 5,
-    'হিফজুল কুরআন পূর্ণ': 6,
-    'হিফজুল কুরআন ২০পারা': 7,
-    'হিফজুল কুরআন ১০পারা': 8,
-    'নাজেরা': 9,
-    'ইলমুত তাজবীদ ওয়াল কিরাআত': 10
-  };
-
-  // Process and order marhalas for boys
-  if (data.exam && Array.isArray(data.exam.examFeeForBoys)) {
-    const orderedMarhalas = [];
-    const hifzMarhalas = [];
-
-    // First, separate Hifz marhalas and other marhalas
-    data.exam.examFeeForBoys.forEach(fee => {
-      const marhalaName = fee.marhala.name.bengaliName;
-      if (marhalaName.includes('হিফজুল কুরআন')) {
-        hifzMarhalas.push(fee);
-      } else {
-        orderedMarhalas.push(fee);
-      }
-    });
-
-    // Sort Hifz marhalas by predefined order
-    hifzMarhalas.sort((a, b) => {
-      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
-      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
-      return orderA - orderB;
-    });
-
-    // Sort other marhalas by predefined order
-    orderedMarhalas.sort((a, b) => {
-      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
-      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
-      return orderA - orderB;
-    });
-
-    // Combine sorted marhalas
-    data.exam.examFeeForBoys = [...orderedMarhalas, ...hifzMarhalas];
-  }
-
-  // Process and order marhalas for girls
-  if (data.exam && Array.isArray(data.exam.examFeeForGirls)) {
-    data.exam.examFeeForGirls.sort((a, b) => {
-      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
-      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
-      return orderA - orderB;
-    });
-  }
-
-  if (data.exam) {
-    data.exam.marhalaNames = marhalaNames;
-    data.exam.marhalaIdMap = marhalaIdMap;
-  }
-
-  // Ensure regesteredexamines exists for all madrasahs
-  if (Array.isArray(data.allMarkaz)) {
-    data.allMarkaz.forEach(markaz => {
-      if (Array.isArray(markaz.allMadrasahWithDetails)) {
-        markaz.allMadrasahWithDetails.forEach(madrasah => {
-          if (!Array.isArray(madrasah.regesteredexamines)) {
-            madrasah.regesteredexamines = [];
-          }
-        });
-      }
-    });
-  }
-
-  return data;
-};
+// const prepareMarkazStudentListData = (data) => { ... };
 
 module.exports = {
   loadTemplate,
   loadPartial,
   registerHelpers,
   prepareData,
-  prepareMarkazStudentListData
+  // Do not export markaz-student-list specific helpers from here anymore
+  // getMarhalaStats,
+  // getTotalMarhalaCount,
+  // prepareMarkazStudentListData,
+  // marhalaNameMap,
 }; 

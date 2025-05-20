@@ -6,7 +6,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const fs = require('fs');
-const { loadTemplate, registerHelpers, prepareData, prepareMarkazStudentListData } = require('../helpers/pdf-helpers');
+const { loadTemplate, registerHelpers, prepareData } = require('../helpers/pdf-helpers');
+const { prepareMarkazStudentListData } = require('../helpers/markaz-student-list-helpers');
 
 // Register Handlebars helpers
 const handlebars = require('handlebars');
@@ -195,7 +196,8 @@ router.post('/generate-markaz-list-with-student-list', async (req, res) => {
   try {
     let data = req.body;
     const handlebars = require('handlebars');
-    const { loadTemplate, registerHelpers, prepareMarkazStudentListData } = require('../helpers/pdf-helpers');
+    const { loadTemplate, registerHelpers } = require('../helpers/pdf-helpers');
+    const {  prepareMarkazStudentListData } = require('../helpers/markaz-student-list-helpers');
     registerHelpers(handlebars);
     data = prepareMarkazStudentListData(data);
     const jsreport = req.app.get('jsreport');
