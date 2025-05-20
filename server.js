@@ -15,6 +15,8 @@ const cors = require('cors');
 const handlebars = require('handlebars'); // Import Handlebars
 const { loadTemplate, registerHelpers } = require('./helpers/pdf-helpers');
 
+const stylesPath = path.join(__dirname, 'styles');
+
 // Register Handlebars helpers
 registerHelpers(handlebars);
 
@@ -32,6 +34,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
+app.use('/styles', express.static(stylesPath));
 
 // static folder to serve fonts
 const fontsPath = path.join(__dirname, 'fonts');

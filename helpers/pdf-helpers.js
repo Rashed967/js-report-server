@@ -172,6 +172,66 @@ const registerHelpers = (handlebars) => {
     }, 0);
     return handlebars.helpers.enToBnNumber(totalExamineesSlots);
   });
+
+  // Increment index (for serial numbers)
+  handlebars.registerHelper('inc', function(value) {
+    return parseInt(value) + 1;
+  });
+
+  // Marhala name map: expects exam object in root context
+  handlebars.registerHelper('marhalaNameMap', function(exam) {
+    const map = {};
+    if (exam && Array.isArray(exam.examFeeForBoys)) {
+      exam.examFeeForBoys.forEach(fee => {
+        if (fee.marhala && exam.marhalaNames && exam.marhalaNames[fee.marhala]) {
+          map[fee.marhala] = exam.marhalaNames[fee.marhala];
+        }
+      });
+    }
+    return map;
+  });
+
+  // Get marhala stats: count and roll ranges for a madrasah's regesteredexamines
+  handlebars.registerHelper('getMarhalaStats', function(regesteredexamines, marhalaId) {
+    if (!Array.isArray(regesteredexamines)) return { count: 0, rollRanges: [] };
+    // Filter examinees for this marhala
+    const filtered = regesteredexamines.filter(e => e.marhala === marhalaId);
+    if (filtered.length === 0) return { count: 0, rollRanges: [] };
+    // Sort by roll (as number)
+    const sorted = filtered.slice().sort((a, b) => Number(a.roll) - Number(b.roll));
+    // Find roll ranges (consecutive)
+    const rollRanges = [];
+    let start = null, end = null;
+    for (let i = 0; i < sorted.length; i++) {
+      const roll = Number(sorted[i].roll);
+      if (start === null) {
+        start = roll;
+        end = roll;
+      } else if (roll === end + 1) {
+        end = roll;
+      } else {
+        rollRanges.push({ start, end });
+        start = roll;
+        end = roll;
+      }
+    }
+    if (start !== null) {
+      rollRanges.push({ start, end });
+    }
+    return { count: filtered.length, rollRanges };
+  });
+
+  // Get total marhala count for all madrasahs under a markaz
+  handlebars.registerHelper('getTotalMarhalaCount', function(allMadrasahWithDetails, marhalaId) {
+    if (!Array.isArray(allMadrasahWithDetails)) return 0;
+    let total = 0;
+    allMadrasahWithDetails.forEach(madrasah => {
+      if (Array.isArray(madrasah.regesteredexamines)) {
+        total += madrasah.regesteredexamines.filter(e => e.marhala === marhalaId).length;
+      }
+    });
+    return total;
+  });
 };
 
 /**
@@ -186,9 +246,48 @@ const prepareData = (data) => {
   };
 };
 
+/**
+ * Prepares data for markaz-student-list template
+ * Adds marhalaNames map to exam, ensures regesteredexamines arrays exist
+ * @param {Object} data
+ * @returns {Object}
+ */
+const prepareMarkazStudentListData = (data) => {
+  // Build marhalaNames map (marhalaId -> name)
+  const marhalaNames = {};
+  if (Array.isArray(data.allMarkaz)) {
+    data.allMarkaz.forEach(markaz => {
+      if (Array.isArray(markaz.marhala)) {
+        markaz.marhala.forEach(m => {
+          if (m._id && m.name && m.name.bengaliName) {
+            marhalaNames[m._id] = m.name.bengaliName;
+          }
+        });
+      }
+    });
+  }
+  if (data.exam) {
+    data.exam.marhalaNames = marhalaNames;
+  }
+  // Ensure regesteredexamines exists for all madrasahs
+  if (Array.isArray(data.allMarkaz)) {
+    data.allMarkaz.forEach(markaz => {
+      if (Array.isArray(markaz.allMadrasahWithDetails)) {
+        markaz.allMadrasahWithDetails.forEach(madrasah => {
+          if (!Array.isArray(madrasah.regesteredexamines)) {
+            madrasah.regesteredexamines = [];
+          }
+        });
+      }
+    });
+  }
+  return data;
+};
+
 module.exports = {
   loadTemplate,
   loadPartial,
   registerHelpers,
-  prepareData
+  prepareData,
+  prepareMarkazStudentListData
 }; 

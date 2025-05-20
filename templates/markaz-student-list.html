@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>মারকায ভিত্তিক পরীক্ষার্থীদের তালিকা</title>
+  <link rel="stylesheet" href="/styles/markaz-student-list-style.css">
+  <style>
+   body {
+  font-family: 'SolaimanLipi', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+@page{
+  size: A4 landscape;
+  margin: 5mm 5mm 5mm 5mm; /* Adjust margins for portrait */
+}
+.page-header {
+  position: relative;
+  margin-bottom: 7px;
+  padding-top: 10px;
+  /* Removed text-align: center to allow flexbox layout */
+}
+.page-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2em;
+  font-family: 'SolaimanLipi', Arial, sans-serif;
+}
+.header-content {
+  display: flex; /* Use flexbox for logo on left, text on right */
+  align-items: center; /* Vertically align items */
+  padding-bottom: 15px; /* Add padding below border */
+}
+.header-left-logo {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+}
+.header-logo-img {
+  height: 90px; /* Adjusted height based on previous manual change */
+  display: block; /* Remove extra space below image */
+}
+.header-center-text {
+  flex-grow: 1; /* Allow text to take remaining space */
+  text-align: center; /* Center text block */
+}
+.header-arabic {
+  font-size: 1.3em;
+  font-family: 'Amiri', serif;
+  margin-bottom: 2px;
+}
+.header-bn {
+  font-size: 1.4em; /* Adjusted font size based on previous manual change */
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.header-en {
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}
+.header-meta {
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}
+.header-exam-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.header-madrasah-type {
+  font-size: 1.1em;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.header-zone {
+  font-size: 1.1em;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.markaz-section {
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+}
+.markaz-header {
+  font-size: .85em;
+  font-weight: bold;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+.markaz-label {
+  color: #444;
+  margin-right: 2px;
+}
+.markaz-madrasah-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-size: 0.97em;
+}
+.markaz-madrasah-table th, .markaz-madrasah-table td {
+  border: 1px solid #888;
+  padding: 2px;
+  text-align: center;
+}
+.markaz-madrasah-table th {
+  background: #e6e6e6;
+}
+.markaz-madrasah-table thead th {
+  font-weight: normal;
+}
+
+#serial-number{
+  width: 25px;
+}
+
+#madrasah-name{
+  width: 170px;
+}
+
+#ilhakNo{
+  width: 65px;
+}
+
+#total-students{
+  width: 60px;
+}
+
+.markaz-madrasah-table tfoot td.total-label {
+  text-align: right;
+  font-weight: bold;
+  background: #f9f9f9;
+}
+@media print {
+  .page-header { page-break-after: avoid; }
+  .markaz-section { page-break-inside: avoid; }
+} 
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <div class="page-number">১</div>
+    <div class="header-content">
+      <div class="header-left-logo">
+        <img src="{{boardInfo.logo}}" alt="Board Logo" class="header-logo-img">
+      </div>
+      <div class="header-center-text">
+        <div class="header-arabic">{{boardInfo.boardName.arabicName}}</div>
+        <div class="header-bn">{{boardInfo.boardName.bengaliName}}</div>
+        <div class="header-en">({{boardInfo.boardName.englishName}})</div>
+        <div class="header-meta">পরীক্ষা নিয়ন্ত্রণ বিভাগ</div>
+        <div class="header-exam-title">{{exam.examName}}</div>
+        <div class="header-madrasah-type">{{madrasahType}} মাদ্রাসা</div>
+        <div class="header-zone">জোন নং: {{#each zones}}{{name}}{{#unless @last}}, {{/unless}}{{/each}} [{{#each districts}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}]</div>
+      </div>
+    </div>
+  </div>
+  {{#each allMarkaz}}
+    <div class="markaz-section">
+      <div class="markaz-header">
+        <span class="markaz-label"></span> <span class="markaz-code">{{code}} :</span>
+        <span class="markaz-label"></span> <span class="markaz-name">{{markazMadrasah.[0].madrasahNames.bengaliName}}</span>
+        <span class="markaz-label">ঠিকানা:</span> <span class="markaz-address">{{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</span>
+      </div>
+      <table class="markaz-madrasah-table">
+        <thead>
+          <tr>
+            <th>ক্র.</th>
+            <th>মাদ্রাসার নাম</th>
+            <th>ইলহাক নম্বর</th>
+            <th>মোট ছাত্র সংখ্যা</th>
+            <!-- marhala names from exam fee for boyes -->
+            {{#each ../exam.examFeeForBoys}}
+              <th>{{lookup ../marhalaNameMap marhala}}</th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each allMadrasahWithDetails}}
+            <tr>
+              <td id="serial-number">{{inc @index}}</td>
+              <td id="madrasah-name">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</td>
+              <td id="ilhakNo">{{enToBnNumber code}}</td>
+              <td id="total-students">{{muhtamim.[0].name}}</td>
+              {{#each ../../exam.examFeeForBoys}}
+                <td>
+                  {{#with (getMarhalaStats ../regesteredexamines marhala)}}
+                    {{enToBnNumber count}}<br>
+                    {{#if rollRanges}}
+                      {{#each rollRanges}}
+                        {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                      {{/each}}
+                    {{/if}}
+                  {{/with}}
+                </td>
+              {{/each}}
+            </tr>
+          {{/each}}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="total-label">মোট পরীক্ষার্থী</td>
+            {{#each ../exam.examFeeForBoys}}
+              <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails marhala)}}</td>
+            {{/each}}
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  {{/each}}
+</body>
+</html> 
