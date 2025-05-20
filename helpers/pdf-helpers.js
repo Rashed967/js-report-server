@@ -249,6 +249,7 @@ const prepareData = (data) => {
 /**
  * Prepares data for markaz-student-list template
  * Adds marhalaNames map to exam, ensures regesteredexamines arrays exist
+ * and orders marhalas in a fixed sequence
  * @param {Object} data
  * @returns {Object}
  */
@@ -266,9 +267,61 @@ const prepareMarkazStudentListData = (data) => {
       }
     });
   }
+
+  // Define fixed order for marhalas
+  const marhalaOrder = {
+    'কিতাব বিভাগ': 1,
+    'হিফজুল কুরআন পূর্ণ': 2,
+    'হিফজুল কুরআন ২০পারা': 3,
+    'হিফজুল কুরআন ১০পারা': 4
+  };
+
+  // Process and order marhalas for boys
+  if (data.exam && Array.isArray(data.exam.examFeeForBoys)) {
+    const orderedMarhalas = [];
+    const hifzMarhalas = [];
+
+    // First, separate Hifz marhalas and other marhalas
+    data.exam.examFeeForBoys.forEach(fee => {
+      const marhalaName = fee.marhala.name.bengaliName;
+      if (marhalaName.includes('হিফজুল কুরআন')) {
+        hifzMarhalas.push(fee);
+      } else {
+        orderedMarhalas.push(fee);
+      }
+    });
+
+    // Sort Hifz marhalas by predefined order
+    hifzMarhalas.sort((a, b) => {
+      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
+      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
+      return orderA - orderB;
+    });
+
+    // Sort other marhalas by predefined order
+    orderedMarhalas.sort((a, b) => {
+      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
+      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
+      return orderA - orderB;
+    });
+
+    // Combine sorted marhalas
+    data.exam.examFeeForBoys = [...orderedMarhalas, ...hifzMarhalas];
+  }
+
+  // Process and order marhalas for girls
+  if (data.exam && Array.isArray(data.exam.examFeeForGirls)) {
+    data.exam.examFeeForGirls.sort((a, b) => {
+      const orderA = marhalaOrder[a.marhala.name.bengaliName] || 999;
+      const orderB = marhalaOrder[b.marhala.name.bengaliName] || 999;
+      return orderA - orderB;
+    });
+  }
+
   if (data.exam) {
     data.exam.marhalaNames = marhalaNames;
   }
+
   // Ensure regesteredexamines exists for all madrasahs
   if (Array.isArray(data.allMarkaz)) {
     data.allMarkaz.forEach(markaz => {
@@ -281,6 +334,7 @@ const prepareMarkazStudentListData = (data) => {
       }
     });
   }
+
   return data;
 };
 

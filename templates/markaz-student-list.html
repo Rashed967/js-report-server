@@ -174,20 +174,14 @@
             {{#if (eq ../madrasahType "বালক")}}
               {{#each ../exam.examFeeForBoys}}
                 {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন পূর্ণ')}}
-                <th>৩০</th>
+                  <th>৩০</th>
+                {{else if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ২০পারা')}}
+                  <th>২০</th>
+                {{else if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ১০পারা')}}
+                  <th>১০</th>
                 {{else}}
-                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ২০পারা')}}
-                <th>২০</th>
-                {{else}}
-                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ১০পারা')}}
-                <th>১০</th>
-                {{else}}
-                <th>{{this.marhala.name.bengaliName}}</th>
+                  <th>{{this.marhala.name.bengaliName}}</th>
                 {{/if}}
-                {{/if}}
-                {{/if}}
-
-
               {{/each}}
             {{else}}
               {{#each ../exam.examFeeForGirls}}
@@ -217,7 +211,7 @@
                   </td>
                 {{/each}}
               {{else}}
-                 {{#each ../../exam.examFeeForGirls}}
+                {{#each ../../exam.examFeeForGirls}}
                   <td>
                     {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
                       {{enToBnNumber count}}<br>
