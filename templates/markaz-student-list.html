@@ -203,7 +203,7 @@
               <td id="serial-number" rowspan="2">{{enToBnNumber (inc @index)}}</td>
               <td id="madrasah-name" rowspan="2">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</td>
               <td id="ilhakNo" rowspan="2">{{enToBnNumber code}}</td>
-              <td id="total-examinees" rowspan="2">{{enToBnNumber regesteredexamines.length}}</td>
+              <td id="total-examinees" rowspan="2">{{#if regesteredexamines.length}}{{enToBnNumber regesteredexamines.length}}{{/if}}</td>
               {{#if (eq ../../madrasahType "বালক")}}
                   {{!-- Data cells for Kitab Vibhag marhalas counts --}}
                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা"))}}
@@ -315,7 +315,7 @@
           <tr>
             <td colspan="3" class="total-label">মোট পরীক্ষার্থী</td>
             <!-- total regestered examines for all madrasah in a markaz -->
-            <td>{{enToBnNumber (sumMarhalaCounts marhalaTotalCounts)}}</td>
+            <td>{{#if (sumMarhalaCounts marhalaTotalCounts)}}{{enToBnNumber (sumMarhalaCounts marhalaTotalCounts)}}{{/if}}</td>
             {{#if (eq ../madrasahType "বালক")}}
               {{!-- Footer cells for Kitab Vibhag marhalas --}}
                <td>{{#with (lookup marhalaTotalCounts (lookup ../exam.marhalaIdMap "আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা"))}}{{#if this}}{{enToBnNumber this}}{{else}}{{enToBnNumber 0}}{{/if}}{{/with}}</td>
@@ -346,10 +346,10 @@
           </tr>
           <tr>
             <td colspan="3" class="total-label">লিখিত পরীক্ষার্থী সংখ্যা</td>
-            <td>{{enToBnNumber totalWrittenInMarkaz}}</td>
+            <td>{{#if totalWrittenInMarkaz}}{{enToBnNumber totalWrittenInMarkaz}}{{/if}}</td>
             {{!-- Empty cells to span across the remaining Darsiyat and Hifz columns --}}
             <td colspan="9" class="total-label" style="text-align: right;">মৌখিক পরীক্ষার্থী সংখ্যা</td> {{!-- Label for Oral Examinees --}}
-            <td>{{enToBnNumber totalOralInMarkaz}}</td>
+            <td>{{#if totalOralInMarkaz}}{{enToBnNumber totalOralInMarkaz}}{{/if}}</td>
           </tr>
         </tfoot>
       </table>

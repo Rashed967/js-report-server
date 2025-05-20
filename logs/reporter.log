@@ -30753,3 +30753,60 @@ Error: Error when evaluating engine handlebars for template anonymous
 2025-05-20T19:35:04.969Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
 2025-05-20T19:35:04.971Z - debug: Discovered 36 extensions
 2025-05-20T19:35:05.025Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-20T19:35:05.027Z - info: Using extension authentication@4.2.3
+2025-05-20T19:35:05.299Z - debug: Extension authentication@4.2.3 was disabled
+2025-05-20T19:35:05.301Z - info: Using extension base@4.0.0
+2025-05-20T19:35:05.307Z - info: Using extension child-templates@4.1.0
+2025-05-20T19:35:05.309Z - info: Using extension cli@4.1.0
+2025-05-20T19:35:05.313Z - info: Using extension components@4.0.2
+2025-05-20T19:35:05.317Z - info: Using extension data@4.1.0
+2025-05-20T19:35:05.319Z - info: Using extension express@4.2.0
+2025-05-20T19:35:05.897Z - info: Using extension freeze@4.0.0
+2025-05-20T19:35:05.900Z - info: Using extension fs-store@4.1.0
+2025-05-20T19:35:06.124Z - debug: Extension fs-store@4.1.0 was disabled
+2025-05-20T19:35:06.125Z - info: Using extension handlebars@4.0.1
+2025-05-20T19:35:06.127Z - info: Using extension import-export@4.0.6
+2025-05-20T19:35:06.148Z - info: Using extension jsrender@4.0.0
+2025-05-20T19:35:06.149Z - info: Using extension licensing@4.0.4
+2025-05-20T19:35:06.218Z - info: Using extension localization@4.0.1
+2025-05-20T19:35:06.220Z - info: Using extension npm@4.0.0
+2025-05-20T19:35:06.230Z - info: Using extension pdf-utils@4.3.0
+2025-05-20T19:35:06.234Z - info: Using extension reports@4.1.3
+2025-05-20T19:35:06.239Z - info: Using extension tags@4.0.1
+2025-05-20T19:35:06.244Z - info: Using extension text@4.0.2
+2025-05-20T19:35:06.245Z - info: Using extension version-control@4.1.0
+2025-05-20T19:35:06.266Z - info: Using extension assets@4.2.1
+2025-05-20T19:35:06.278Z - info: Using extension authorization@4.1.0
+2025-05-20T19:35:06.284Z - debug: Extension authorization@4.1.0 was disabled
+2025-05-20T19:35:06.284Z - info: Using extension browser-client@4.1.0
+2025-05-20T19:35:06.287Z - info: Using extension docx@4.7.0
+2025-05-20T19:35:06.290Z - info: Using extension html-to-xlsx@4.2.0
+2025-05-20T19:35:06.577Z - info: html-to-xlsx detected chrome as available html engine
+2025-05-20T19:35:06.578Z - info: Using extension pptx@4.4.0
+2025-05-20T19:35:06.581Z - info: Using extension scheduling@4.1.0
+2025-05-20T19:35:06.615Z - info: Using extension scripts@4.2.0
+2025-05-20T19:35:06.616Z - info: Using extension static-pdf@4.1.0
+2025-05-20T19:35:06.617Z - info: Using extension studio@4.3.0
+2025-05-20T19:35:06.755Z - info: Using extension xlsx@4.4.0
+2025-05-20T19:35:06.758Z - info: Using extension chrome-pdf@4.1.1
+2025-05-20T19:35:06.761Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-05-20T19:35:06.761Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-05-20T19:35:06.762Z - info: Using extension public-templates@4.0.0
+2025-05-20T19:35:06.764Z - debug: Extension public-templates@4.0.0 was disabled
+2025-05-20T19:35:06.765Z - info: Using extension sample-template@4.0.1
+2025-05-20T19:35:06.769Z - info: Using extension studio-theme-dark@4.0.0
+2025-05-20T19:35:06.772Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-05-20T19:35:06.772Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-05-20T19:35:06.784Z - debug: studio default theme is: light
+2025-05-20T19:35:06.790Z - info: Creating default express app.
+2025-05-20T19:35:06.812Z - info: jsreport server successfully started on http port: 5488
+2025-05-20T19:35:06.814Z - info: Verifying license key free
+2025-05-20T19:35:06.816Z - info: Using free license
+2025-05-20T19:35:06.826Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-05-20T19:35:06.827Z - info: Migration successful
+2025-05-20T19:35:06.828Z - debug: Creating samples is disabled
+2025-05-20T19:35:06.846Z - info: Initializing worker threads
+2025-05-20T19:35:06.846Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-05-20T19:35:07.967Z - info: 2 worker threads initialized in 1121ms
+2025-05-20T19:35:07.968Z - info: Starting temp files cleanup with 180000ms threshold
+2025-05-20T19:35:07.969Z - info: reporter initialized
