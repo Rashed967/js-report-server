@@ -145,6 +145,24 @@ const prepareMarkazStudentListData = (data) => {
   // Ensure regesteredexamines exists for all madrasahs
   if (Array.isArray(data.allMarkaz)) {
     let grandTotalExaminees = 0; // Initialize grand total
+    let totalWrittenExaminees = 0; // Initialize total written examinees
+    let totalOralExaminees = 0; // Initialize total oral examinees
+
+    // Define lists of Darsiyat and Hifz marhala names (Bengali)
+    const darsiyatMarhalaNames = [
+      'আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা',
+      'ফযীলত (স্নাতক)',
+      'সানাবিয়াতুল উলইয়া',
+      'মুতাওয়াসসিতাহ (৮ম শ্রেণী)',
+      'ইবতেদাইয়্যাহ (৫ম শ্রেণী)',
+      'নাজেরা',
+      'ইলমুত তাজবীদ ওয়াল কিরাআত'
+    ];
+    const hifzMarhalaNames = [
+      'হিফজুল কুরআন পূর্ণ',
+      'হিফজুল কুরআন ২০পারা',
+      'হিফজুল কুরআন ১০পারা'
+    ];
 
     data.allMarkaz.forEach(markaz => {
       if (Array.isArray(markaz.allMadrasahWithDetails)) {
@@ -156,11 +174,24 @@ const prepareMarkazStudentListData = (data) => {
             madrasah.regesteredexamines = [];
           }
 
-          // Aggregate examinee counts per marhala for this markaz and add to grand total
+          // Aggregate examinee counts per marhala for this markaz and add to grand total, written, and oral totals
           madrasah.regesteredexamines.forEach(examinee => {
             const marhalaId = examinee.marhala;
             if (marhalaId) {
               markaz.marhalaTotalCounts[marhalaId] = (markaz.marhalaTotalCounts[marhalaId] || 0) + 1;
+
+              // Check if marhala is Darsiyat or Hifz using the marhalaMap (id -> marhala object)
+              const marhala = data.exam.marhalaMap ? data.exam.marhalaMap[marhalaId] : null;
+              if (marhala && marhala.name && marhala.name.bengaliName) {
+                const marhalaBnName = marhala.name.bengaliName;
+                if (darsiyatMarhalaNames.includes(marhalaBnName)) {
+                  
+                  totalWrittenExaminees++;
+                } else if (hifzMarhalaNames.includes(marhalaBnName)) {
+                  totalOralExaminees++;
+                }
+                // console.log(totalWrittenExaminees)
+              }
             }
           });
           grandTotalExaminees += madrasah.regesteredexamines.length; // Add madrasah total to grand total
@@ -169,6 +200,9 @@ const prepareMarkazStudentListData = (data) => {
     });
 
     data.grandTotalExaminees = grandTotalExaminees; // Add grand total to the data object
+    data.totalWrittenExaminees = totalWrittenExaminees; // Add total written examinees to data
+
+    data.totalOralExaminees = totalOralExaminees; // Add total oral examinees to data
   }
 
   // Sort marhalas based on the defined order for potential future use or verification
