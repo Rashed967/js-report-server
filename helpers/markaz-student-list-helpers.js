@@ -168,6 +168,8 @@ const prepareMarkazStudentListData = (data) => {
       if (Array.isArray(markaz.allMadrasahWithDetails)) {
         // Ensure regesteredexamines exists for all madrasahs and initialize marhala total counts
         markaz.marhalaTotalCounts = {}; // Initialize an object to store total counts per marhala for this markaz
+        markaz.totalWrittenInMarkaz = 0; // Initialize written examinee count for this markaz
+        markaz.totalOralInMarkaz = 0; // Initialize oral examinee count for this markaz
 
         markaz.allMadrasahWithDetails.forEach(madrasah => {
           if (!Array.isArray(madrasah.regesteredexamines)) {
@@ -185,12 +187,10 @@ const prepareMarkazStudentListData = (data) => {
               if (marhala && marhala.name && marhala.name.bengaliName) {
                 const marhalaBnName = marhala.name.bengaliName;
                 if (darsiyatMarhalaNames.includes(marhalaBnName)) {
-                  
-                  totalWrittenExaminees++;
+                  markaz.totalWrittenInMarkaz++; // Increment markaz written total
                 } else if (hifzMarhalaNames.includes(marhalaBnName)) {
-                  totalOralExaminees++;
+                  markaz.totalOralInMarkaz++; // Increment markaz oral total
                 }
-                // console.log(totalWrittenExaminees)
               }
             }
           });
@@ -200,9 +200,7 @@ const prepareMarkazStudentListData = (data) => {
     });
 
     data.grandTotalExaminees = grandTotalExaminees; // Add grand total to the data object
-    data.totalWrittenExaminees = totalWrittenExaminees; // Add total written examinees to data
-
-    data.totalOralExaminees = totalOralExaminees; // Add total oral examinees to data
+    // Note: totalWrittenExaminees and totalOralExaminees calculated at the markaz level are now stored in markaz objects
   }
 
   // Sort marhalas based on the defined order for potential future use or verification
