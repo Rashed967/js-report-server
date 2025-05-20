@@ -30810,3 +30810,21 @@ Error: Error when evaluating engine handlebars for template anonymous
 2025-05-20T19:35:07.967Z - info: 2 worker threads initialized in 1121ms
 2025-05-20T19:35:07.968Z - info: Starting temp files cleanup with 180000ms threshold
 2025-05-20T19:35:07.969Z - info: reporter initialized
+2025-05-20T19:38:32.243Z - info: Render request 1 queued for execution and waiting for available worker rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.258Z - info: Starting rendering request 1 rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.259Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.259Z - debug: Inline data specified. rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.261Z - debug: Base url not specified, skipping its injection. rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.262Z - debug: Rendering engine handlebars rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:32.826Z - debug: Executing recipe chrome-pdf rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.243Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.334Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0d48a32d-e3ca-4f42-8a53-e1571fa32f82-chrome-pdf.html rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.352Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0d48a32d-e3ca-4f42-8a53-e1571fa32f82-chrome-pdf.html rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.353Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.355Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.356Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.357Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.523Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:33.525Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59407,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:34.161Z - debug: Skipping storing report. rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8
+2025-05-20T19:38:34.161Z - info: Rendering request 1 finished in 1920 ms rootId=qn7uzqg5h97ohq8, id=qn7uzqg5h97ohq8

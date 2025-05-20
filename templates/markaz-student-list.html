@@ -258,40 +258,180 @@
               {{#if (eq ../../madrasahType "বালক")}}
                   {{!-- Data cells for Kitab Vibhag marhalas roll ranges --}}
                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ফযীলত (স্নাতক)"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "সানাবিয়াতুল উলইয়া"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৮ম শ্রেণী)"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইবতেদাইয়্যাহ (৫ম শ্রেণী)"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
 
                   {{!-- Data cell for Ilmut Tajweed Wal Qiraat roll ranges --}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইলমুত তাজবীদ ওয়াল কিরাআত"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
 
                   {{!-- Data cells for Hifz marhalas roll ranges --}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন পূর্ণ"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ২০পারা"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ১০পারা"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
 
                   {{!-- Data cells for Nazera and Kiat roll ranges--}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "নাজেরা"))}}
-                    <td>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                    <td>
+                      {{#if rollRanges}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
+                      {{/if}}
+                    </td>
                   {{/with}}
 
               {{else}}
@@ -300,9 +440,17 @@
                   <td>
                     {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
                        {{#if rollRanges}}
-                        {{#each rollRanges}}
-                          {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
-                        {{/each}}
+                        {{#if (eq rollRanges.length 1)}}
+                          {{#if (eq rollRanges.[0].start rollRanges.[0].end)}}
+                            {{enToBnNumber rollRanges.[0].start}}
+                          {{else}}
+                            {{enToBnNumber rollRanges.[0].start}} - {{enToBnNumber rollRanges.[0].end}}<br>
+                          {{/if}}
+                        {{else}}
+                          {{#each rollRanges}}
+                            {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
+                          {{/each}}
+                        {{/if}}
                       {{/if}}
                     {{/with}}
                   </td>
