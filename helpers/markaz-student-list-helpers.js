@@ -3,33 +3,45 @@
  */
 
 // Get marhala stats: count and roll ranges for a madrasah's regesteredexamines
-const getMarhalaStats = (regesteredexamines, marhalaId) => {
-  if (!Array.isArray(regesteredexamines)) return { count: 0, rollRanges: [] };
-  // Filter examinees for this marhala
-  const filtered = regesteredexamines.filter(e => e.marhala === marhalaId);
-  if (filtered.length === 0) return { count: 0, rollRanges: [] };
-  // Sort by roll (as number)
-  const sorted = filtered.slice().sort((a, b) => Number(a.roll) - Number(b.roll));
-  // Find roll ranges (consecutive)
-  const rollRanges = [];
-  let start = null, end = null;
-  for (let i = 0; i < sorted.length; i++) {
-    const roll = Number(sorted[i].roll);
-    if (start === null) {
-      start = roll;
-      end = roll;
-    } else if (roll === end + 1) {
-      end = roll;
-    } else {
-      rollRanges.push({ start, end });
-      start = roll;
-      end = roll;
-    }
+const getMarhalaStats = (examinees, marhalaId) => {
+  // Ensure examinees is a valid array
+  if (!examinees || !Array.isArray(examinees)) {
+    // console.log(`getMarhalaStats: Invalid examinees array for marhalaId ${marhalaId}`);
+    return { count: 0, rollRanges: [] };
   }
-  if (start !== null) {
+
+  // Filter examinees for this marhalaId
+  const marhalaExaminees = examinees.filter(ex => ex.marhala === marhalaId);
+
+  // Get count
+  const count = marhalaExaminees.length;
+
+  // Get roll ranges
+  const rollRanges = [];
+  if (count > 0) {
+    // Extract and sort roll numbers as numbers
+    const rolls = marhalaExaminees.map(ex => parseInt(ex.roll)).sort((a, b) => a - b);
+
+    let start = rolls[0];
+    let end = rolls[0];
+
+    for (let i = 1; i < rolls.length; i++) {
+      // Check for consecutive rolls
+      if (rolls[i] === end + 1) {
+        end = rolls[i];
+      } else {
+        // Push the completed range and start a new one
+        rollRanges.push({ start, end });
+        start = rolls[i];
+        end = rolls[i];
+      }
+    }
+    // Push the last range
     rollRanges.push({ start, end });
   }
-  return { count: filtered.length, rollRanges };
+
+  // console.log(`getMarhalaStats: Marhala ID ${marhalaId}, Count: ${count}, Roll Ranges: ${JSON.stringify(rollRanges)}`);
+  return { count, rollRanges };
 };
 
 // Get total marhala count for all madrasahs under a markaz
@@ -65,42 +77,63 @@ const marhalaNameMap = (exam) => {
  * @returns {Object} - Processed data for template
  */
 const prepareMarkazStudentListData = (data) => {
-  // Build marhalaNames map (marhalaId -> name) and marhalaIdMap (name -> id)
+  // Build marhalaNames map (marhalaId -> name), marhalaIdMap (name -> id), and marhalaMap (id -> marhala object)
   const marhalaNames = {};
   const marhalaIdMap = {};
+  const marhalaMap = {}; // New map: id -> marhala object
+
+  // Collect marhala info from exam.examFeeForBoys
+  if (data.exam && Array.isArray(data.exam.examFeeForBoys)) {
+    data.exam.examFeeForBoys.forEach(fee => {
+      if (fee.marhala && fee.marhala._id && fee.marhala.name && fee.marhala.name.bengaliName) {
+        const id = fee.marhala._id;
+        const nameBn = fee.marhala.name.bengaliName;
+        marhalaNames[id] = nameBn;
+        marhalaIdMap[nameBn] = id;
+        marhalaMap[id] = fee.marhala; // Store the whole marhala object
+      }
+    });
+  }
+
+  // Collect marhala info from allMarkaz.marhala (in case some marhalas are only listed here)
   if (Array.isArray(data.allMarkaz)) {
     data.allMarkaz.forEach(markaz => {
       if (Array.isArray(markaz.marhala)) {
         markaz.marhala.forEach(m => {
           if (m._id && m.name && m.name.bengaliName) {
-            marhalaNames[m._id] = m.name.bengaliName;
-            marhalaIdMap[m.name.bengaliName] = m._id;
+            const id = m._id;
+            const nameBn = m.name.bengaliName;
+            // Only add if not already added from examFeeForBoys
+            if (!marhalaNames[id]) {
+               marhalaNames[id] = nameBn;
+               marhalaIdMap[nameBn] = id;
+               marhalaMap[id] = m; // Store the whole marhala object
+            }
           }
         });
       }
     });
   }
 
-  // Define fixed order for marhalas
-  // Note: Ordering is handled by the explicit template structure now,
-  // but keeping this map for potential future use or reference.
+
+  // Define fixed order for marhalas - Update keys to match sample data names
   const marhalaOrder = {
-    'আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা': 1,
-    'ফযীলত (মাতব)': 2,
-    'সানাবিয়্যাতুল উলইয়া': 3,
-    'মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)': 4,
+    'আত্ তাখাসসুস ফিল ফিকহি ওয়াল ইফতা': 1,
+    'ফযীলত (স্নাতক)': 2, // Corrected name
+    'সানাবিয়্যাতুল উলইয়া': 3,
+    'মুতাওয়াসসিতাহ (৮ম শ্রেণী)': 4, // Corrected name
     'ইবতেদাইয়্যাহ (৫ম শ্রেণী)': 5,
-    'ইলমুত তাজবীদ ওয়াল কিরাআত': 6,
-    'হিফজুল কুরআন পূর্ণ': 7,
-    'হিফজুল কুরআন ২০পারা': 8,
-    'হিফজুল কুরআন ১০পারা': 9,
-    'নাযেরা': 10,
-    'কিরাআত': 11
+    'নাজেরা': 6, // Placing Nazera and Kiat before Hifz as per latest image/request order
+    'ইলমুত তাজবীদ ওয়াল কিরাআত': 7,
+    'হিফজুল কুরআন পূর্ণ': 8,
+    'হিফজুল কুরআন ২০পারা': 9,
+    'হিফজুল কুরআন ১০পারা': 10
   };
 
   if (data.exam) {
     data.exam.marhalaNames = marhalaNames;
     data.exam.marhalaIdMap = marhalaIdMap;
+    data.exam.marhalaMap = marhalaMap; // Add the new map
   }
 
   // Ensure regesteredexamines exists for all madrasahs
@@ -113,6 +146,17 @@ const prepareMarkazStudentListData = (data) => {
           }
         });
       }
+    });
+  }
+
+  // Sort marhalas based on the defined order for potential future use or verification
+  // This sorting is not directly used for the current fixed table header structure
+  // but can be helpful for dynamic generation or verification.
+  if (data.exam && Array.isArray(data.exam.examFeeForBoys)) {
+    data.exam.examFeeForBoys.sort((a, b) => {
+      const orderA = marhalaOrder[a.marhala.name.bengaliName] || Infinity;
+      const orderB = marhalaOrder[b.marhala.name.bengaliName] || Infinity;
+      return orderA - orderB;
     });
   }
 

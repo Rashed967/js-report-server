@@ -170,16 +170,16 @@
             <th id="serial-number" rowspan="2">ক্র.</th>
             <th id="madrasah-name" rowspan="2">মাদ্রাসার নাম</th>
             <th id="ilhakNo" rowspan="2">ইলহাক নম্বর</th>
-            <th id="total-students" rowspan="2">মোট ছাত্র সংখ্যা</th>
+            <th id="total-examinees" rowspan="2">মোট পরীক্ষার্থী</th>
             {{#if (eq ../madrasahType "বালক")}}
-              <th rowspan="2">আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা</th>
-              <th rowspan="2">ফযীলত (মাতব)</th>
-              <th rowspan="2">সানাবিয়্যাতুল উলইয়া</th>
-              <th rowspan="2">মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)</th>
-              <th rowspan="2">ইবতেদাইয়্যাহ (৫ম শ্রেণী)</th>
-              <th colspan="3">হিফজ</th>
-              <th rowspan="2">নাজেরা</th>
-              <th rowspan="2">ইলমুত তাজবীদ ওয়াল কিরাআত</th>
+              <th rowspan="2">আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">ফযীলত (মাতব)<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">সানাবিয়্যাতুল উলইয়া<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">ইবতেদাইয়্যাহ (৫ম শ্রেণী)<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th colspan="3">হিফজ<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">নাজেরা<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
+              <th rowspan="2">ইলমুত তাজবীদ ওয়াল কিরাআত<br><small>(পরীক্ষার্থী সংখ্যা)</small></th>
             {{else}}
                {{!-- Handle girls marhalas dynamically if needed, or hardcode based on expected data --}}
                {{!-- For now, assuming a similar structure might be needed for girls or it's simpler --}}
@@ -206,16 +206,16 @@
               <td id="total-examinees">{{enToBnNumber regesteredexamines.length}}</td>
               {{#if (eq ../../madrasahType "বালক")}}
                   {{!-- Data cells for Kitab Vibhag marhalas --}}
-                  {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা"))}}
+                  {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা"))}}
                     <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ফযীলত (মাতব)"))}}
                     <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
                   {{/with}}
-                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "সানাবিয়্যাতুল উলইয়া"))}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "সানাবিয়্যাতুল উলইয়া"))}}
                     <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
                   {{/with}}
-                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)"))}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)"))}}
                     <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
                   {{/with}}
                    {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইবতেদাইয়্যাহ (৫ম শ্রেণী)"))}}
