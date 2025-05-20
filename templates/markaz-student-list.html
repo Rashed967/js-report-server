@@ -166,8 +166,18 @@
     <div class="markaz-section">
       <div class="markaz-header">
         <span class="markaz-label"></span> <span class="markaz-code">{{enToBnNumber code}} :</span>
-        <span class="markaz-label"></span> <span class="markaz-name">{{markazMadrasah.[0].madrasahNames.bengaliName}}</span>
-        <span class="markaz-label">ঠিকানা:</span> <span class="markaz-address">{{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</span>
+        <span class="markaz-label"></span> <span class="markaz-name">{{markazMadrasah.[0].madrasahNames.bengaliName}} ।</span>
+        <span class="markaz-label"></span> <span class="markaz-address">{{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}} ।</span>
+        <span>  
+            মুহতামিম : {{#with (lookup muhtamim 0) as |muhtamimDetails|}}
+                {{muhtamimDetails.name}}
+             {{/with}}
+        </span>
+        <span>  
+             , {{#with (lookup muhtamim 0) as |muhtamimDetails|}}
+                {{enToBnNumber muhtamimDetails.contactNo}}
+             {{/with}}
+        </span>
       </div>
       <table class="markaz-madrasah-table">
         <thead>
@@ -206,7 +216,11 @@
           {{#each allMadrasahWithDetails}}
             <tr>
               <td id="serial-number" rowspan="2">{{enToBnNumber (inc @index)}}</td>
-              <td id="madrasah-name" rowspan="2">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}</td>
+              <td id="madrasah-name" rowspan="2">{{madrasahNames.bengaliName}}, {{address.[0].village}}, {{address.[0].subDistrict_policeStation}}, {{address.[0].district}}, {{address.[0].division}}। 
+              
+                {{muhtamim.[0].name}}, {{ enToBnNumber muhtamim.[0].contactNo}}
+
+              </td>
               <td id="ilhakNo" rowspan="2">{{enToBnNumber code}}</td>
               <td id="total-examinees" rowspan="2">{{#if regesteredexamines.length}}{{enToBnNumber regesteredexamines.length}}{{/if}}</td>
               {{#if (eq ../../madrasahType "বালক")}}

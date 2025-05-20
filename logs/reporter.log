@@ -30982,3 +30982,211 @@ Error: Error when evaluating engine handlebars for template anonymous
 2025-05-20T19:47:02.188Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59975,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=os286dw0kcmo0tt, id=os286dw0kcmo0tt
 2025-05-20T19:47:02.694Z - debug: Skipping storing report. rootId=os286dw0kcmo0tt, id=os286dw0kcmo0tt
 2025-05-20T19:47:02.694Z - info: Rendering request 4 finished in 768 ms rootId=os286dw0kcmo0tt, id=os286dw0kcmo0tt
+2025-05-20T19:48:22.329Z - info: Render request 5 queued for execution and waiting for available worker rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.332Z - info: Starting rendering request 5 rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.332Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.332Z - debug: Inline data specified. rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.333Z - debug: Base url not specified, skipping its injection. rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.333Z - debug: Rendering engine handlebars rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.343Z - debug: Executing recipe chrome-pdf rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.346Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.408Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/41fcf58f-7a05-47f5-ae4f-4f23d79e96ed-chrome-pdf.html rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.426Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/41fcf58f-7a05-47f5-ae4f-4f23d79e96ed-chrome-pdf.html rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.426Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.427Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.428Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.428Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.463Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.466Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59982,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.960Z - debug: Skipping storing report. rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:48:22.960Z - info: Rendering request 5 finished in 633 ms rootId=1mxtwmjgidayka4, id=1mxtwmjgidayka4
+2025-05-20T19:57:09.826Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-05-20T19:57:09.829Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-20T19:57:09.835Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-20T19:57:09.941Z - info: Found 36 extension(s)
+2025-05-20T19:57:09.977Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-05-20T19:57:09.980Z - debug: Discovered 36 extensions
+2025-05-20T19:57:10.029Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-20T19:57:10.030Z - info: Using extension authentication@4.2.3
+2025-05-20T19:57:10.276Z - debug: Extension authentication@4.2.3 was disabled
+2025-05-20T19:57:10.277Z - info: Using extension base@4.0.0
+2025-05-20T19:57:10.280Z - info: Using extension child-templates@4.1.0
+2025-05-20T19:57:10.282Z - info: Using extension cli@4.1.0
+2025-05-20T19:57:10.288Z - info: Using extension components@4.0.2
+2025-05-20T19:57:10.290Z - info: Using extension data@4.1.0
+2025-05-20T19:57:10.291Z - info: Using extension express@4.2.0
+2025-05-20T19:57:10.791Z - info: Using extension freeze@4.0.0
+2025-05-20T19:57:10.794Z - info: Using extension fs-store@4.1.0
+2025-05-20T19:57:10.965Z - debug: Extension fs-store@4.1.0 was disabled
+2025-05-20T19:57:10.965Z - info: Using extension handlebars@4.0.1
+2025-05-20T19:57:10.967Z - info: Using extension import-export@4.0.6
+2025-05-20T19:57:10.979Z - info: Using extension jsrender@4.0.0
+2025-05-20T19:57:10.981Z - info: Using extension licensing@4.0.4
+2025-05-20T19:57:11.030Z - info: Using extension localization@4.0.1
+2025-05-20T19:57:11.032Z - info: Using extension npm@4.0.0
+2025-05-20T19:57:11.039Z - info: Using extension pdf-utils@4.3.0
+2025-05-20T19:57:11.041Z - info: Using extension reports@4.1.3
+2025-05-20T19:57:11.045Z - info: Using extension tags@4.0.1
+2025-05-20T19:57:11.047Z - info: Using extension text@4.0.2
+2025-05-20T19:57:11.049Z - info: Using extension version-control@4.1.0
+2025-05-20T19:57:11.064Z - info: Using extension assets@4.2.1
+2025-05-20T19:57:11.075Z - info: Using extension authorization@4.1.0
+2025-05-20T19:57:11.081Z - debug: Extension authorization@4.1.0 was disabled
+2025-05-20T19:57:11.081Z - info: Using extension browser-client@4.1.0
+2025-05-20T19:57:11.085Z - info: Using extension docx@4.7.0
+2025-05-20T19:57:11.087Z - info: Using extension html-to-xlsx@4.2.0
+2025-05-20T19:57:11.295Z - info: html-to-xlsx detected chrome as available html engine
+2025-05-20T19:57:11.295Z - info: Using extension pptx@4.4.0
+2025-05-20T19:57:11.298Z - info: Using extension scheduling@4.1.0
+2025-05-20T19:57:11.330Z - info: Using extension scripts@4.2.0
+2025-05-20T19:57:11.331Z - info: Using extension static-pdf@4.1.0
+2025-05-20T19:57:11.332Z - info: Using extension studio@4.3.0
+2025-05-20T19:57:11.521Z - info: Using extension xlsx@4.4.0
+2025-05-20T19:57:11.526Z - info: Using extension chrome-pdf@4.1.1
+2025-05-20T19:57:11.531Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-05-20T19:57:11.532Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-05-20T19:57:11.533Z - info: Using extension public-templates@4.0.0
+2025-05-20T19:57:11.536Z - debug: Extension public-templates@4.0.0 was disabled
+2025-05-20T19:57:11.536Z - info: Using extension sample-template@4.0.1
+2025-05-20T19:57:11.539Z - info: Using extension studio-theme-dark@4.0.0
+2025-05-20T19:57:11.541Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-05-20T19:57:11.541Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-05-20T19:57:11.556Z - debug: studio default theme is: light
+2025-05-20T19:57:11.560Z - info: Creating default express app.
+2025-05-20T19:57:11.584Z - info: jsreport server successfully started on http port: 5488
+2025-05-20T19:57:11.586Z - info: Verifying license key free
+2025-05-20T19:57:11.588Z - info: Using free license
+2025-05-20T19:57:11.598Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-05-20T19:57:11.600Z - info: Migration successful
+2025-05-20T19:57:11.601Z - debug: Creating samples is disabled
+2025-05-20T19:57:11.602Z - info: Initializing worker threads
+2025-05-20T19:57:11.603Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-05-20T19:57:12.524Z - info: 2 worker threads initialized in 922ms
+2025-05-20T19:57:12.525Z - info: Starting temp files cleanup with 180000ms threshold
+2025-05-20T19:57:12.526Z - info: reporter initialized
+2025-05-20T20:00:37.653Z - info: Render request 1 queued for execution and waiting for available worker rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:37.671Z - info: Starting rendering request 1 rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:37.672Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:37.672Z - debug: Inline data specified. rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:37.674Z - debug: Base url not specified, skipping its injection. rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:37.675Z - debug: Rendering engine handlebars rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.268Z - debug: Executing recipe chrome-pdf rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.710Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.796Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0b6353eb-c987-4610-a9c7-a90153de060e-chrome-pdf.html rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.824Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0b6353eb-c987-4610-a9c7-a90153de060e-chrome-pdf.html rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.825Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.826Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.846Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:38.847Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:39.005Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:39.007Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59378,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:39.560Z - debug: Skipping storing report. rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:00:39.560Z - info: Rendering request 1 finished in 1909 ms rootId=nnvrxfcwef5klt1, id=nnvrxfcwef5klt1
+2025-05-20T20:02:10.565Z - info: Render request 2 queued for execution and waiting for available worker rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:10.570Z - info: Starting rendering request 2 rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:10.571Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:10.571Z - debug: Inline data specified. rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:10.577Z - debug: Base url not specified, skipping its injection. rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:10.578Z - debug: Rendering engine handlebars rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:11.149Z - debug: Executing recipe chrome-pdf rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:11.580Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.837Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/10396c5d-5ac4-4ce0-b8ae-62f53d5ef46a-chrome-pdf.html rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.857Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/10396c5d-5ac4-4ce0-b8ae-62f53d5ef46a-chrome-pdf.html rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.858Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.860Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.864Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:12.865Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:14.210Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:14.213Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59405,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:14.739Z - debug: Skipping storing report. rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:02:14.739Z - info: Rendering request 2 finished in 4175 ms rootId=6dvhghicpm1h05l, id=6dvhghicpm1h05l
+2025-05-20T20:03:26.992Z - info: Render request 3 queued for execution and waiting for available worker rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:26.995Z - info: Starting rendering request 3 rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:26.996Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:26.996Z - debug: Inline data specified. rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:26.996Z - debug: Base url not specified, skipping its injection. rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:26.997Z - debug: Rendering engine handlebars rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.011Z - debug: Executing recipe chrome-pdf rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.013Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.204Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/fbab6672-d497-4519-b102-d3d4dbd33395-chrome-pdf.html rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.227Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/fbab6672-d497-4519-b102-d3d4dbd33395-chrome-pdf.html rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.228Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.228Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.229Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.229Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.268Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.271Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59978,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.802Z - debug: Skipping storing report. rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:03:27.802Z - info: Rendering request 3 finished in 812 ms rootId=juze6v59ilh2tsn, id=juze6v59ilh2tsn
+2025-05-20T20:04:39.895Z - info: Render request 4 queued for execution and waiting for available worker rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.898Z - info: Starting rendering request 4 rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.898Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.898Z - debug: Inline data specified. rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.899Z - debug: Base url not specified, skipping its injection. rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.899Z - debug: Rendering engine handlebars rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.915Z - debug: Executing recipe chrome-pdf rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:39.917Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.079Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/28ce8bc1-1b51-4f1b-b263-65c4f5eb88d5-chrome-pdf.html rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.098Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/28ce8bc1-1b51-4f1b-b263-65c4f5eb88d5-chrome-pdf.html rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.098Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.100Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.100Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.100Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.133Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.135Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59978,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.630Z - debug: Skipping storing report. rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:04:40.631Z - info: Rendering request 4 finished in 737 ms rootId=rt30ee22d5v86mf, id=rt30ee22d5v86mf
+2025-05-20T20:05:00.814Z - info: Render request 5 queued for execution and waiting for available worker rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.817Z - info: Starting rendering request 5 rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.817Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.817Z - debug: Inline data specified. rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.818Z - debug: Base url not specified, skipping its injection. rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.818Z - debug: Rendering engine handlebars rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.830Z - debug: Executing recipe chrome-pdf rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.832Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.907Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/b29bf46b-b40a-43bd-9ab4-70091cedaa20-chrome-pdf.html rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.929Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/b29bf46b-b40a-43bd-9ab4-70091cedaa20-chrome-pdf.html rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.933Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.933Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.934Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.934Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.967Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:00.969Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59981,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:01.537Z - debug: Skipping storing report. rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:05:01.537Z - info: Rendering request 5 finished in 724 ms rootId=yokzkret56le8jw, id=yokzkret56le8jw
+2025-05-20T20:06:17.610Z - info: Render request 6 queued for execution and waiting for available worker rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.614Z - info: Starting rendering request 6 rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.614Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.614Z - debug: Inline data specified. rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.616Z - debug: Base url not specified, skipping its injection. rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.619Z - debug: Rendering engine handlebars rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.634Z - debug: Executing recipe chrome-pdf rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.637Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.697Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/1859c6b2-e29d-41ee-b583-59341af8238b-chrome-pdf.html rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.716Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/1859c6b2-e29d-41ee-b583-59341af8238b-chrome-pdf.html rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.717Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.718Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.722Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.723Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.756Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:17.759Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59973,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:18.283Z - debug: Skipping storing report. rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:06:18.283Z - info: Rendering request 6 finished in 675 ms rootId=w0chzg4n5x0cyiz, id=w0chzg4n5x0cyiz
+2025-05-20T20:11:48.787Z - info: Render request 7 queued for execution and waiting for available worker rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.790Z - info: Starting rendering request 7 rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.790Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.790Z - debug: Inline data specified. rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.792Z - debug: Base url not specified, skipping its injection. rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.792Z - debug: Rendering engine handlebars rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.804Z - debug: Executing recipe chrome-pdf rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.807Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.874Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/ac8ed940-ca97-4ac6-a7ea-e4e027a358f0-chrome-pdf.html rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.894Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/ac8ed940-ca97-4ac6-a7ea-e4e027a358f0-chrome-pdf.html rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.895Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.901Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.902Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.902Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.928Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:48.931Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59979,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:49.409Z - debug: Skipping storing report. rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
+2025-05-20T20:11:49.409Z - info: Rendering request 7 finished in 624 ms rootId=dsfre0q6pccd36a, id=dsfre0q6pccd36a
