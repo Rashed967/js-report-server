@@ -167,27 +167,34 @@
       <table class="markaz-madrasah-table">
         <thead>
           <tr>
-            <th id="serial-number">ক্র.</th>
-            <th id="madrasah-name">মাদ্রাসার নাম</th>
-            <th id="ilhakNo">ইলহাক নম্বর</th>
-            <th id="total-students">মোট ছাত্র সংখ্যা</th>
+            <th id="serial-number" rowspan="2">ক্র.</th>
+            <th id="madrasah-name" rowspan="2">মাদ্রাসার নাম</th>
+            <th id="ilhakNo" rowspan="2">ইলহাক নম্বর</th>
+            <th id="total-students" rowspan="2">মোট ছাত্র সংখ্যা</th>
             {{#if (eq ../madrasahType "বালক")}}
-              {{#each ../exam.examFeeForBoys}}
-                {{#if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন পূর্ণ')}}
-                  <th>৩০</th>
-                {{else if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ২০পারা')}}
-                  <th>২০</th>
-                {{else if (eq this.marhala.name.bengaliName 'হিফজুল কুরআন ১০পারা')}}
-                  <th>১০</th>
-                {{else}}
-                  <th>{{this.marhala.name.bengaliName}}</th>
-                {{/if}}
-              {{/each}}
+              <th rowspan="2">আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা</th>
+              <th rowspan="2">ফযীলত (মাতব)</th>
+              <th rowspan="2">সানাবিয়্যাতুল উলইয়া</th>
+              <th rowspan="2">মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)</th>
+              <th rowspan="2">ইবতেদাইয়্যাহ (৫ম শ্রেণী)</th>
+              <th colspan="3">হিফজ</th>
+              <th rowspan="2">নাজেরা</th>
+              <th rowspan="2">ইলমুত তাজবীদ ওয়াল কিরাআত</th>
             {{else}}
-              {{#each ../exam.examFeeForGirls}}
-                <th>{{this.marhala.name.bengaliName}}</th>
+               {{!-- Handle girls marhalas dynamically if needed, or hardcode based on expected data --}}
+               {{!-- For now, assuming a similar structure might be needed for girls or it's simpler --}}
+               {{#each ../exam.examFeeForGirls}}
+                <th rowspan="2">{{this.marhala.name.bengaliName}}</th>
               {{/each}}
             {{/if}}
+          </tr>
+          <tr>
+             {{#if (eq ../madrasahType "বালক")}}
+                {{!-- This row is for the sub-headers under Hifz --}}
+                <th>৩০</th>
+                <th>২০</th>
+                <th>১০</th>
+             {{/if}}
           </tr>
         </thead>
         <tbody>
@@ -198,20 +205,47 @@
               <td id="ilhakNo">{{enToBnNumber code}}</td>
               <td id="total-students">{{enToBnNumber (lookup madrasah_information.[0] 'totalStudents')}}</td>
               {{#if (eq ../../madrasahType "বালক")}}
-                {{#each ../../exam.examFeeForBoys}}
-                  <td>
-                    {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
-                      {{enToBnNumber count}}<br>
-                      {{#if rollRanges}}
-                        {{#each rollRanges}}
-                          {{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>
-                        {{/each}}
-                      {{/if}}
-                    {{/with}}
-                  </td>
-                {{/each}}
+                  {{!-- Data cells for Kitab Vibhag marhalas --}}
+                  {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ফযীলত (মাতব)"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "সানাবিয়্যাতুল উলইয়া"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইবতেদাইয়্যাহ (৫ম শ্রেণী)"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+
+                  {{!-- Data cell for Ilmut Tajweed Wal Qiraat --}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "ইলমুত তাজবীদ ওয়াল কিরাআত"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+
+                  {{!-- Data cells for Hifz marhalas --}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন পূর্ণ"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ২০পারা"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "হিফজুল কুরআন ১০পারা"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+
+                  {{!-- Data cells for Nazera and Kiat --}}
+                   {{#with (getMarhalaStats regesteredexamines (lookup ../../exam.marhalaIdMap "নাজেরা"))}}
+                    <td>{{enToBnNumber count}}<br>{{#each rollRanges}}{{enToBnNumber this.start}} - {{enToBnNumber this.end}}<br>{{/each}}</td>
+                  {{/with}}
+
               {{else}}
-                {{#each ../../exam.examFeeForGirls}}
+                 {{!-- Data cells for girls marhalas dynamically --}}
+                 {{#each ../../exam.examFeeForGirls}}
                   <td>
                     {{#with (getMarhalaStats ../regesteredexamines this.marhala._id)}}
                       {{enToBnNumber count}}<br>
@@ -231,10 +265,28 @@
           <tr>
             <td colspan="4" class="total-label">মোট পরীক্ষার্থী</td>
             {{#if (eq ../madrasahType "বালক")}}
-              {{#each ../exam.examFeeForBoys}}
-                <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails this.marhala._id)}}</td>
-              {{/each}}
+              {{!-- Footer cells for Kitab Vibhag marhalas --}}
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "ফযীলত (মাতব)"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "সানাবিয়্যাতুল উলইয়া"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "ইবতেদাইয়্যাহ (৫ম শ্রেণী)"))}}</td>
+
+            
+
+              {{!-- Footer cells for Hifz marhalas --}}
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "হিফজুল কুরআন পূর্ণ"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "হিফজুল কুরআন ২০পারা"))}}</td>
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "হিফজুল কুরআন ১০পারা"))}}</td>
+
+              {{!-- Footer cells for Nazera and Kiat --}}
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "নাজেরা"))}}</td>
+
+               {{!-- Footer cell for Ilmut Tajweed Wal Qiraat --}}
+               <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails (lookup ../exam.marhalaIdMap "ইলমুত তাজবীদ ওয়াল কিরাআত"))}}</td>
+
             {{else}}
+              {{!-- Footer cells for girls marhalas dynamically --}}
               {{#each ../exam.examFeeForGirls}}
                 <td>{{enToBnNumber (getTotalMarhalaCount ../../allMadrasahWithDetails this.marhala._id)}}</td>
               {{/each}}

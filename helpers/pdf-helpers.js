@@ -254,14 +254,16 @@ const prepareData = (data) => {
  * @returns {Object}
  */
 const prepareMarkazStudentListData = (data) => {
-  // Build marhalaNames map (marhalaId -> name)
+  // Build marhalaNames map (marhalaId -> name) and marhalaIdMap (name -> id)
   const marhalaNames = {};
+  const marhalaIdMap = {};
   if (Array.isArray(data.allMarkaz)) {
     data.allMarkaz.forEach(markaz => {
       if (Array.isArray(markaz.marhala)) {
         markaz.marhala.forEach(m => {
           if (m._id && m.name && m.name.bengaliName) {
             marhalaNames[m._id] = m.name.bengaliName;
+            marhalaIdMap[m.name.bengaliName] = m._id;
           }
         });
       }
@@ -270,10 +272,16 @@ const prepareMarkazStudentListData = (data) => {
 
   // Define fixed order for marhalas
   const marhalaOrder = {
-    'কিতাব বিভাগ': 1,
-    'হিফজুল কুরআন পূর্ণ': 2,
-    'হিফজুল কুরআন ২০পারা': 3,
-    'হিফজুল কুরআন ১০পারা': 4
+    'আত্ তাহাস্‌সুস ফিল ফিকহি ওয়াল ইফতা': 1,
+    'ফযীলত (মাতব)': 2,
+    'সানাবিয়্যাতুল উলইয়া': 3,
+    'মুতাওয়াসসিতাহ (৬ষ্ঠ শ্রেণী)': 4,
+    'ইবতেদাইয়্যাহ (৫ম শ্রেণী)': 5,
+    'হিফজুল কুরআন পূর্ণ': 6,
+    'হিফজুল কুরআন ২০পারা': 7,
+    'হিফজুল কুরআন ১০পারা': 8,
+    'নাজেরা': 9,
+    'ইলমুত তাজবীদ ওয়াল কিরাআত': 10
   };
 
   // Process and order marhalas for boys
@@ -320,6 +328,7 @@ const prepareMarkazStudentListData = (data) => {
 
   if (data.exam) {
     data.exam.marhalaNames = marhalaNames;
+    data.exam.marhalaIdMap = marhalaIdMap;
   }
 
   // Ensure regesteredexamines exists for all madrasahs
