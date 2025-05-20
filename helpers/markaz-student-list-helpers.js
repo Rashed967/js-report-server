@@ -140,10 +140,21 @@ const prepareMarkazStudentListData = (data) => {
   if (Array.isArray(data.allMarkaz)) {
     data.allMarkaz.forEach(markaz => {
       if (Array.isArray(markaz.allMadrasahWithDetails)) {
+        // Ensure regesteredexamines exists for all madrasahs and initialize marhala total counts
+        markaz.marhalaTotalCounts = {}; // Initialize an object to store total counts per marhala for this markaz
+
         markaz.allMadrasahWithDetails.forEach(madrasah => {
           if (!Array.isArray(madrasah.regesteredexamines)) {
             madrasah.regesteredexamines = [];
           }
+
+          // Aggregate examinee counts per marhala for this markaz
+          madrasah.regesteredexamines.forEach(examinee => {
+            const marhalaId = examinee.marhala;
+            if (marhalaId) {
+              markaz.marhalaTotalCounts[marhalaId] = (markaz.marhalaTotalCounts[marhalaId] || 0) + 1;
+            }
+          });
         });
       }
     });
