@@ -43,17 +43,23 @@ app.use('/fonts', express.static(fontsPath));
 // Use PDF routes
 app.use('/api/pdf', pdfRouter);
 
-// Start express app on port 5490
-app.listen(5490, () => {
-  console.log('Express server running on http://localhost:5490');
-});
+// Initialize jsreport first, then start the server
+const startServer = async () => {
+  try {
+    await jsreport.init();
+    console.log('jsreport initialized successfully');
+    
+    app.listen(5490, () => {
+      console.log('Express server running on http://localhost:5490');
+    });
 
-// initialize jsreport
-jsreport.init().then(() => {
+    app.get('/hello', (req, res) => {
+      res.send('Hello World');
+    });
+  } catch (e) {
+    console.error('Failed to initialize jsreport:', e);
+    process.exit(1);
+  }
+};
 
-  app.get('/hello', (req, res) => {
-    res.send('Hello World');
-  });
-}).catch((e) => {
-  console.error(e);
-});
+startServer();
