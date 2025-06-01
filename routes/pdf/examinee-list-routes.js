@@ -9,13 +9,15 @@ const fs = require('fs');
 const { loadTemplate } = require('../../helpers/pdf-helpers');
 
 // Helper function to calculate total fee
-function calculateTotalFee(examinees) {
+function calculateTotalFee(examinees, selectedExam) {
   let totalFee = 0;
+  const examFee = selectedExam.examFeeForBoys[0]; // Get the first exam fee entry
+  
   examinees.forEach(examinee => {
     const isRegular = examinee.registrationType === 'নিয়মিত';
     const fee = isRegular ? 
-      examinee.exam.registrationFeeForRegularStudent : 
-      examinee.exam.registrationFeeForIrregularStudent;
+      examFee.examFeeForRegularStudent : 
+      examFee.examFeeForIrregularStudent;
     totalFee += fee;
   });
   return totalFee;
@@ -33,6 +35,7 @@ async function loadLogoAsBase64() {
  * POST /api/pdf/examinee-list
  */
 router.post('/examinee-list', async (req, res) => {
+  console.log(req.body)
   try {
     // Get data from request
     const { registeredExaminees, selectedExam, boardInfo, madrasah } = req.body;
@@ -68,14 +71,23 @@ router.post('/examinee-list', async (req, res) => {
       })
     }));
 
+    // Calculate total fees for each group
+    const marhalaGroupsWithFees = marhalaGroupsArray.map(group => ({
+      ...group,
+      totalFee: calculateTotalFee(group.examinees, selectedExam)
+    }));
+
+    // Calculate grand total
+    const grandTotal = marhalaGroupsWithFees.reduce((sum, group) => sum + group.totalFee, 0);
+
     // Prepare template data
     const templateData = {
-      marhalaGroups: marhalaGroupsArray,
+      marhalaGroups: marhalaGroupsWithFees,
       selectedExam,
       boardInfo,
       madrasah,
       examName: selectedExam.examName,
-      calculateTotalFee: calculateTotalFee // Pass helper to template
+      grandTotal
     };
 
     // Load template

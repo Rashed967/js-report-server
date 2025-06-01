@@ -31624,3 +31624,763 @@ Error: Error when evaluating engine handlebars for template anonymous
 2025-05-21T07:08:56.197Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
 2025-05-21T07:08:56.199Z - debug: Discovered 36 extensions
 2025-05-21T07:08:56.249Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-21T07:22:56.625Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-05-21T07:22:56.629Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-21T07:22:56.635Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-21T07:22:56.753Z - info: Found 36 extension(s)
+2025-05-21T07:22:56.791Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-05-21T07:22:56.794Z - debug: Discovered 36 extensions
+2025-05-21T07:22:56.855Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-21T07:22:56.857Z - info: Using extension authentication@4.2.3
+2025-05-21T07:22:57.147Z - debug: Extension authentication@4.2.3 was disabled
+2025-05-21T07:22:57.149Z - info: Using extension base@4.0.0
+2025-05-21T07:22:57.155Z - info: Using extension child-templates@4.1.0
+2025-05-21T07:22:57.157Z - info: Using extension cli@4.1.0
+2025-05-21T07:22:57.163Z - info: Using extension components@4.0.2
+2025-05-21T07:22:57.166Z - info: Using extension data@4.1.0
+2025-05-21T07:22:57.169Z - info: Using extension express@4.2.0
+2025-05-21T07:22:57.648Z - info: Using extension freeze@4.0.0
+2025-05-21T07:22:57.651Z - info: Using extension fs-store@4.1.0
+2025-05-21T07:22:57.814Z - debug: Extension fs-store@4.1.0 was disabled
+2025-05-21T07:22:57.815Z - info: Using extension handlebars@4.0.1
+2025-05-21T07:22:57.817Z - info: Using extension import-export@4.0.6
+2025-05-21T07:22:57.830Z - info: Using extension jsrender@4.0.0
+2025-05-21T07:22:57.833Z - info: Using extension licensing@4.0.4
+2025-05-21T07:22:57.882Z - info: Using extension localization@4.0.1
+2025-05-21T07:22:57.883Z - info: Using extension npm@4.0.0
+2025-05-21T07:22:57.889Z - info: Using extension pdf-utils@4.3.0
+2025-05-21T07:22:57.892Z - info: Using extension reports@4.1.3
+2025-05-21T07:22:57.896Z - info: Using extension tags@4.0.1
+2025-05-21T07:22:57.898Z - info: Using extension text@4.0.2
+2025-05-21T07:22:57.900Z - info: Using extension version-control@4.1.0
+2025-05-21T07:22:57.914Z - info: Using extension assets@4.2.1
+2025-05-21T07:22:57.926Z - info: Using extension authorization@4.1.0
+2025-05-21T07:22:57.931Z - debug: Extension authorization@4.1.0 was disabled
+2025-05-21T07:22:57.932Z - info: Using extension browser-client@4.1.0
+2025-05-21T07:22:57.935Z - info: Using extension docx@4.7.0
+2025-05-21T07:22:57.937Z - info: Using extension html-to-xlsx@4.2.0
+2025-05-21T07:22:58.149Z - info: html-to-xlsx detected chrome as available html engine
+2025-05-21T07:22:58.149Z - info: Using extension pptx@4.4.0
+2025-05-21T07:22:58.153Z - info: Using extension scheduling@4.1.0
+2025-05-21T07:22:58.200Z - info: Using extension scripts@4.2.0
+2025-05-21T07:22:58.202Z - info: Using extension static-pdf@4.1.0
+2025-05-21T07:22:58.204Z - info: Using extension studio@4.3.0
+2025-05-21T07:22:58.401Z - info: Using extension xlsx@4.4.0
+2025-05-21T07:22:58.404Z - info: Using extension chrome-pdf@4.1.1
+2025-05-21T07:22:58.407Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-05-21T07:22:58.409Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-05-21T07:22:58.412Z - info: Using extension public-templates@4.0.0
+2025-05-21T07:22:58.415Z - debug: Extension public-templates@4.0.0 was disabled
+2025-05-21T07:22:58.416Z - info: Using extension sample-template@4.0.1
+2025-05-21T07:22:58.420Z - info: Using extension studio-theme-dark@4.0.0
+2025-05-21T07:22:58.423Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-05-21T07:22:58.424Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-05-21T07:22:58.442Z - debug: studio default theme is: light
+2025-05-21T07:22:58.448Z - info: Creating default express app.
+2025-05-21T07:22:58.479Z - info: jsreport server successfully started on http port: 5488
+2025-05-21T07:22:58.481Z - info: Verifying license key free
+2025-05-21T07:22:58.484Z - info: Using free license
+2025-05-21T07:22:58.495Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-05-21T07:22:58.496Z - info: Migration successful
+2025-05-21T07:22:58.497Z - debug: Creating samples is disabled
+2025-05-21T07:22:58.497Z - info: Initializing worker threads
+2025-05-21T07:22:58.498Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-05-21T07:22:59.550Z - info: 2 worker threads initialized in 1053ms
+2025-05-21T07:22:59.551Z - info: Starting temp files cleanup with 180000ms threshold
+2025-05-21T07:22:59.552Z - info: reporter initialized
+2025-05-21T07:23:12.756Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-05-21T07:23:12.761Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-21T07:23:12.766Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-05-21T07:23:12.875Z - info: Found 36 extension(s)
+2025-05-21T07:23:12.910Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-05-21T07:23:12.913Z - debug: Discovered 36 extensions
+2025-05-21T07:23:12.961Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-05-21T07:23:12.963Z - info: Using extension authentication@4.2.3
+2025-05-21T07:23:13.274Z - debug: Extension authentication@4.2.3 was disabled
+2025-05-21T07:23:13.275Z - info: Using extension base@4.0.0
+2025-05-21T07:23:13.278Z - info: Using extension child-templates@4.1.0
+2025-05-21T07:23:13.280Z - info: Using extension cli@4.1.0
+2025-05-21T07:23:13.283Z - info: Using extension components@4.0.2
+2025-05-21T07:23:13.285Z - info: Using extension data@4.1.0
+2025-05-21T07:23:13.287Z - info: Using extension express@4.2.0
+2025-05-21T07:23:13.816Z - info: Using extension freeze@4.0.0
+2025-05-21T07:23:13.818Z - info: Using extension fs-store@4.1.0
+2025-05-21T07:23:13.999Z - debug: Extension fs-store@4.1.0 was disabled
+2025-05-21T07:23:14.000Z - info: Using extension handlebars@4.0.1
+2025-05-21T07:23:14.001Z - info: Using extension import-export@4.0.6
+2025-05-21T07:23:14.015Z - info: Using extension jsrender@4.0.0
+2025-05-21T07:23:14.017Z - info: Using extension licensing@4.0.4
+2025-05-21T07:23:14.067Z - info: Using extension localization@4.0.1
+2025-05-21T07:23:14.068Z - info: Using extension npm@4.0.0
+2025-05-21T07:23:14.075Z - info: Using extension pdf-utils@4.3.0
+2025-05-21T07:23:14.077Z - info: Using extension reports@4.1.3
+2025-05-21T07:23:14.080Z - info: Using extension tags@4.0.1
+2025-05-21T07:23:14.083Z - info: Using extension text@4.0.2
+2025-05-21T07:23:14.084Z - info: Using extension version-control@4.1.0
+2025-05-21T07:23:14.099Z - info: Using extension assets@4.2.1
+2025-05-21T07:23:14.111Z - info: Using extension authorization@4.1.0
+2025-05-21T07:23:14.117Z - debug: Extension authorization@4.1.0 was disabled
+2025-05-21T07:23:14.118Z - info: Using extension browser-client@4.1.0
+2025-05-21T07:23:14.120Z - info: Using extension docx@4.7.0
+2025-05-21T07:23:14.125Z - info: Using extension html-to-xlsx@4.2.0
+2025-05-21T07:23:14.406Z - info: html-to-xlsx detected chrome as available html engine
+2025-05-21T07:23:14.406Z - info: Using extension pptx@4.4.0
+2025-05-21T07:23:14.409Z - info: Using extension scheduling@4.1.0
+2025-05-21T07:23:14.451Z - info: Using extension scripts@4.2.0
+2025-05-21T07:23:14.452Z - info: Using extension static-pdf@4.1.0
+2025-05-21T07:23:14.453Z - info: Using extension studio@4.3.0
+2025-05-21T07:23:14.591Z - info: Using extension xlsx@4.4.0
+2025-05-21T07:23:14.594Z - info: Using extension chrome-pdf@4.1.1
+2025-05-21T07:23:14.597Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-05-21T07:23:14.598Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-05-21T07:23:14.599Z - info: Using extension public-templates@4.0.0
+2025-05-21T07:23:14.601Z - debug: Extension public-templates@4.0.0 was disabled
+2025-05-21T07:23:14.602Z - info: Using extension sample-template@4.0.1
+2025-05-21T07:23:14.606Z - info: Using extension studio-theme-dark@4.0.0
+2025-05-21T07:23:14.608Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-05-21T07:23:14.609Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-05-21T07:23:14.625Z - debug: studio default theme is: light
+2025-05-21T07:23:14.630Z - info: Creating default express app.
+2025-05-21T07:23:14.653Z - info: jsreport server successfully started on http port: 5488
+2025-05-21T07:23:14.657Z - info: Verifying license key free
+2025-05-21T07:23:14.658Z - info: Using free license
+2025-05-21T07:23:14.670Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-05-21T07:23:14.672Z - info: Migration successful
+2025-05-21T07:23:14.673Z - debug: Creating samples is disabled
+2025-05-21T07:23:14.674Z - info: Initializing worker threads
+2025-05-21T07:23:14.675Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-05-21T07:23:15.701Z - info: 2 worker threads initialized in 1026ms
+2025-05-21T07:23:15.702Z - info: Starting temp files cleanup with 180000ms threshold
+2025-05-21T07:23:15.702Z - info: reporter initialized
+2025-05-21T07:23:26.478Z - info: Render request 1 queued for execution and waiting for available worker rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:26.492Z - info: Starting rendering request 1 rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:26.492Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:26.492Z - debug: Inline data specified. rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:26.494Z - debug: Base url not specified, skipping its injection. rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:26.495Z - debug: Rendering engine handlebars rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.105Z - debug: Executing recipe chrome-pdf rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.524Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.608Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/a77afa25-1eca-4d03-bec8-b1ce6435d685-chrome-pdf.html rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.625Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/a77afa25-1eca-4d03-bec8-b1ce6435d685-chrome-pdf.html rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.625Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.626Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.627Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.627Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.846Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:27.848Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59365,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:28.376Z - debug: Skipping storing report. rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T07:23:28.376Z - info: Rendering request 1 finished in 1900 ms rootId=j17yl8xawaeopzq, id=j17yl8xawaeopzq
+2025-05-21T08:44:43.888Z - debug: OData query on templates
+2025-05-21T08:44:43.908Z - debug: OData query on settings
+2025-05-21T08:44:43.916Z - debug: OData query on folders
+2025-05-21T08:44:43.924Z - debug: OData query on components
+2025-05-21T08:44:43.932Z - debug: OData query on data
+2025-05-21T08:44:43.939Z - debug: OData query on tags
+2025-05-21T08:44:43.947Z - debug: OData query on assets
+2025-05-21T08:44:43.954Z - debug: OData query on scripts
+2025-05-21T08:44:43.960Z - debug: OData query on schedules
+2025-05-21T08:44:44.013Z - debug: OData query on templates
+2025-05-21T08:44:44.040Z - debug: OData query on profiles
+2025-05-21T08:44:44.070Z - debug: OData query on profiles
+2025-05-21T08:44:44.080Z - debug: OData query on profiles
+2025-05-21T08:44:44.091Z - debug: OData query on profiles
+2025-05-21T08:44:44.100Z - debug: OData query on profiles
+2025-05-21T08:44:44.106Z - debug: OData query on profiles
+2025-05-21T08:44:44.112Z - debug: OData query on templates
+2025-05-21T08:45:40.447Z - debug: OData query on reports
+2025-05-21T08:45:44.620Z - debug: OData query on templates
+2025-05-21T08:45:44.628Z - debug: OData query on profiles
+2025-05-21T08:45:44.635Z - debug: OData query on profiles
+2025-05-21T08:45:44.643Z - debug: OData query on profiles
+2025-05-21T08:45:44.651Z - debug: OData query on profiles
+2025-05-21T08:45:44.658Z - debug: OData query on profiles
+2025-05-21T08:45:44.663Z - debug: OData query on profiles
+2025-05-21T08:45:44.670Z - debug: OData query on templates
+2025-05-21T08:46:41.203Z - debug: OData query on profiles
+2025-05-21T09:09:12.305Z - info: Render request 2 queued for execution and waiting for available worker rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.313Z - info: Starting rendering request 2 rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.314Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.314Z - debug: Inline data specified. rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.316Z - debug: Base url not specified, skipping its injection. rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.317Z - debug: Rendering engine handlebars rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:12.931Z - debug: Executing recipe chrome-pdf rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.312Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.387Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0b5b047f-2555-4f8d-bdab-b2644c553278-chrome-pdf.html rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.405Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/0b5b047f-2555-4f8d-bdab-b2644c553278-chrome-pdf.html rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.408Z - debug: Page request: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.410Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.415Z - warn: Page request failed: GET (stylesheet) file:///C:/styles/markaz-student-list-style.css, failure: net::ERR_ACCESS_DENIED rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:13.416Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:14.434Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:14.439Z - debug: Running chrome with params {"marginTop":"10mm","marginRight":"5mm","marginBottom":"10mm","marginLeft":"5mm","format":"A4","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59365,"margin":{"top":"10mm","right":"5mm","bottom":"10mm","left":"5mm"}} rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:14.975Z - debug: Skipping storing report. rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-05-21T09:09:14.975Z - info: Rendering request 2 finished in 2672 ms rootId=n7kxh0jzoenmwj9, id=n7kxh0jzoenmwj9
+2025-06-01T19:56:17.144Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T19:56:17.148Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T19:56:17.151Z - info: Extensions location cache not found, crawling directories
+2025-06-01T19:56:26.008Z - info: Found 36 extension(s)
+2025-06-01T19:56:26.091Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T19:56:26.096Z - debug: Discovered 36 extensions
+2025-06-01T19:56:26.166Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-06-01T19:56:26.168Z - info: Using extension authentication@4.2.3
+2025-06-01T19:56:26.572Z - debug: Extension authentication@4.2.3 was disabled
+2025-06-01T19:56:26.574Z - info: Using extension base@4.0.0
+2025-06-01T19:56:26.577Z - info: Using extension child-templates@4.1.0
+2025-06-01T19:56:26.578Z - info: Using extension cli@4.1.0
+2025-06-01T19:56:26.584Z - info: Using extension components@4.0.2
+2025-06-01T19:56:26.588Z - info: Using extension data@4.1.0
+2025-06-01T19:56:26.590Z - info: Using extension express@4.2.0
+2025-06-01T19:56:27.526Z - info: Using extension freeze@4.0.0
+2025-06-01T19:56:27.531Z - info: Using extension fs-store@4.1.0
+2025-06-01T19:56:28.168Z - debug: Extension fs-store@4.1.0 was disabled
+2025-06-01T19:56:28.170Z - info: Using extension handlebars@4.0.1
+2025-06-01T19:56:28.172Z - info: Using extension import-export@4.0.6
+2025-06-01T19:56:28.225Z - info: Using extension jsrender@4.0.0
+2025-06-01T19:56:28.227Z - info: Using extension licensing@4.0.4
+2025-06-01T19:56:28.342Z - info: Using extension localization@4.0.1
+2025-06-01T19:56:28.344Z - info: Using extension npm@4.0.0
+2025-06-01T19:56:28.347Z - info: Using extension pdf-utils@4.3.0
+2025-06-01T19:56:28.353Z - info: Using extension reports@4.1.3
+2025-06-01T19:56:28.360Z - info: Using extension tags@4.0.1
+2025-06-01T19:56:28.367Z - info: Using extension text@4.0.2
+2025-06-01T19:56:28.370Z - info: Using extension version-control@4.1.0
+2025-06-01T19:56:28.417Z - info: Using extension assets@4.2.1
+2025-06-01T19:56:28.456Z - info: Using extension authorization@4.1.0
+2025-06-01T19:56:28.477Z - debug: Extension authorization@4.1.0 was disabled
+2025-06-01T19:56:28.477Z - info: Using extension browser-client@4.1.0
+2025-06-01T19:56:28.491Z - info: Using extension docx@4.7.0
+2025-06-01T19:56:28.496Z - info: Using extension html-to-xlsx@4.2.0
+2025-06-01T19:56:29.106Z - info: html-to-xlsx detected chrome as available html engine
+2025-06-01T19:56:29.106Z - info: Using extension pptx@4.4.0
+2025-06-01T19:56:29.109Z - info: Using extension scheduling@4.1.0
+2025-06-01T19:56:29.162Z - info: Using extension scripts@4.2.0
+2025-06-01T19:56:29.165Z - info: Using extension static-pdf@4.1.0
+2025-06-01T19:56:29.166Z - info: Using extension studio@4.3.0
+2025-06-01T19:56:29.392Z - info: Using extension xlsx@4.4.0
+2025-06-01T19:56:29.395Z - info: Using extension chrome-pdf@4.1.1
+2025-06-01T19:56:29.407Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-06-01T19:56:29.412Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-06-01T19:56:29.420Z - info: Using extension public-templates@4.0.0
+2025-06-01T19:56:29.434Z - debug: Extension public-templates@4.0.0 was disabled
+2025-06-01T19:56:29.435Z - info: Using extension sample-template@4.0.1
+2025-06-01T19:56:29.440Z - info: Using extension studio-theme-dark@4.0.0
+2025-06-01T19:56:29.445Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-06-01T19:56:29.446Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-06-01T19:56:29.464Z - debug: studio default theme is: light
+2025-06-01T19:56:29.471Z - info: Creating default express app.
+2025-06-01T19:56:29.519Z - info: jsreport server successfully started on http port: 5488
+2025-06-01T19:56:29.525Z - info: Verifying license key free
+2025-06-01T19:56:29.527Z - info: Using free license
+2025-06-01T19:56:29.534Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-06-01T19:56:29.537Z - info: Migration successful
+2025-06-01T19:56:29.538Z - debug: Creating samples is disabled
+2025-06-01T19:56:29.540Z - info: Initializing worker threads
+2025-06-01T19:56:29.540Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-06-01T19:56:31.022Z - info: 2 worker threads initialized in 1482ms
+2025-06-01T19:56:31.023Z - info: Starting temp files cleanup with 180000ms threshold
+2025-06-01T19:56:31.024Z - info: reporter initialized
+2025-06-01T19:57:47.732Z - info: Render request 1 queued for execution and waiting for available worker rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:47.750Z - info: Starting rendering request 1 rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:47.752Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:47.753Z - debug: Inline data specified. rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:47.757Z - debug: Base url not specified, skipping its injection. rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:47.759Z - debug: Rendering engine handlebars rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:48.569Z - debug: Executing recipe chrome-pdf rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.280Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.381Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/29cedd88-f38e-4cd8-ac55-29f7321bb456-chrome-pdf.html rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.400Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/29cedd88-f38e-4cd8-ac55-29f7321bb456-chrome-pdf.html rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.402Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.406Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.415Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.430Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.430Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.553Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.598Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59150,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.994Z - debug: Skipping storing report. rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T19:57:50.994Z - info: Rendering request 1 finished in 3265 ms rootId=wcunxu315bfdgdd, id=wcunxu315bfdgdd
+2025-06-01T20:04:36.450Z - info: Render request 2 queued for execution and waiting for available worker rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:36.455Z - info: Starting rendering request 2 rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:36.459Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:36.460Z - debug: Inline data specified. rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:36.462Z - debug: Base url not specified, skipping its injection. rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:36.464Z - debug: Rendering engine handlebars rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.054Z - debug: Executing recipe chrome-pdf rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.489Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.579Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/e33d35ad-de28-43fa-8fa9-486955384792-chrome-pdf.html rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.601Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/e33d35ad-de28-43fa-8fa9-486955384792-chrome-pdf.html rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.602Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.605Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.618Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.709Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:37.710Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:38.241Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:38.248Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59385,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:38.600Z - debug: Skipping storing report. rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:04:38.600Z - info: Rendering request 2 finished in 2153 ms rootId=b1fyxbm3e4v6h20, id=b1fyxbm3e4v6h20
+2025-06-01T20:05:30.151Z - info: Render request 3 queued for execution and waiting for available worker rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.155Z - info: Starting rendering request 3 rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.155Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.156Z - debug: Inline data specified. rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.157Z - debug: Base url not specified, skipping its injection. rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.157Z - debug: Rendering engine handlebars rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.178Z - debug: Executing recipe chrome-pdf rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.184Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.367Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/4967faf6-5dfc-4f56-b204-af970aee1fcf-chrome-pdf.html rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.387Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/4967faf6-5dfc-4f56-b204-af970aee1fcf-chrome-pdf.html rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.387Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.388Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.392Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.393Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.398Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.398Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.419Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59967,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.719Z - debug: Skipping storing report. rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:05:30.719Z - info: Rendering request 3 finished in 570 ms rootId=lueijjjavltlha5, id=lueijjjavltlha5
+2025-06-01T20:10:33.791Z - info: Render request 4 queued for execution and waiting for available worker rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.800Z - info: Starting rendering request 4 rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.800Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.800Z - debug: Inline data specified. rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.802Z - debug: Base url not specified, skipping its injection. rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.803Z - debug: Rendering engine handlebars rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.823Z - debug: Executing recipe chrome-pdf rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.827Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.914Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/d3488cba-5925-437c-b2b4-888e73567b00-chrome-pdf.html rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.942Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/d3488cba-5925-437c-b2b4-888e73567b00-chrome-pdf.html rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.943Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:33.944Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.006Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.008Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.019Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.019Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.028Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59956,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.328Z - debug: Skipping storing report. rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:10:34.328Z - info: Rendering request 4 finished in 547 ms rootId=ivuwbzrcowj51kd, id=ivuwbzrcowj51kd
+2025-06-01T20:11:13.010Z - info: Render request 5 queued for execution and waiting for available worker rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.016Z - info: Starting rendering request 5 rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.016Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.016Z - debug: Inline data specified. rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.021Z - debug: Base url not specified, skipping its injection. rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.021Z - debug: Rendering engine handlebars rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.036Z - debug: Executing recipe chrome-pdf rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.039Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.117Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/13bc1d05-2da7-4c04-8bd4-183d91a14293-chrome-pdf.html rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.134Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/13bc1d05-2da7-4c04-8bd4-183d91a14293-chrome-pdf.html rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.138Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.139Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.181Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.183Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.189Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.189Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.197Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59968,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.766Z - debug: Skipping storing report. rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:11:13.766Z - info: Rendering request 5 finished in 760 ms rootId=bb5nmsk2eobufsc, id=bb5nmsk2eobufsc
+2025-06-01T20:39:43.133Z - info: Render request 6 queued for execution and waiting for available worker rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.136Z - info: Starting rendering request 6 rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.136Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.136Z - debug: Inline data specified. rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.138Z - debug: Base url not specified, skipping its injection. rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.138Z - debug: Rendering engine handlebars rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.165Z - debug: Executing recipe chrome-pdf rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.172Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.239Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/79a70ef3-c70b-4844-8bc0-76cf326761df-chrome-pdf.html rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.254Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/79a70ef3-c70b-4844-8bc0-76cf326761df-chrome-pdf.html rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.259Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.261Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.309Z - debug: Page request: GET (font) http://localhost:5488/fonts/kalpurush.ttf rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.311Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.323Z - debug: [36m(console:error) Failed to load resource: the server responded with a status of 404 (Not Found)[39m userLevel=true, rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.324Z - warn: Page request failed: GET (font) http://localhost:5488/fonts/kalpurush.ttf, failure: net::ERR_ABORTED rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.333Z - debug: Running chrome with params {"marginTop":"0mm","marginRight":"0mm","marginBottom":"0mm","marginLeft":"0mm","format":"A5","landscape":false,"scale":1,"displayHeaderFooter":false,"printBackground":true,"timeout":59961,"margin":{"top":"0mm","right":"0mm","bottom":"0mm","left":"0mm"}} rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.619Z - debug: Skipping storing report. rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:39:43.619Z - info: Rendering request 6 finished in 488 ms rootId=qquszpddtu21bfl, id=qquszpddtu21bfl
+2025-06-01T20:44:31.048Z - info: Render request 7 queued for execution and waiting for available worker rootId=34uzssei3n399zd, id=34uzssei3n399zd
+2025-06-01T20:58:11.522Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T20:58:11.526Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T20:58:11.530Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T20:58:11.655Z - info: Found 36 extension(s)
+2025-06-01T20:58:11.697Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T20:58:11.699Z - debug: Discovered 36 extensions
+2025-06-01T20:58:11.749Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-06-01T20:58:11.751Z - info: Using extension authentication@4.2.3
+2025-06-01T20:58:13.177Z - debug: Extension authentication@4.2.3 was disabled
+2025-06-01T20:58:13.179Z - info: Using extension base@4.0.0
+2025-06-01T20:58:13.185Z - info: Using extension child-templates@4.1.0
+2025-06-01T20:58:13.188Z - info: Using extension cli@4.1.0
+2025-06-01T20:58:13.194Z - info: Using extension components@4.0.2
+2025-06-01T20:58:13.197Z - info: Using extension data@4.1.0
+2025-06-01T20:58:13.199Z - info: Using extension express@4.2.0
+2025-06-01T20:58:13.748Z - info: Using extension freeze@4.0.0
+2025-06-01T20:58:13.750Z - info: Using extension fs-store@4.1.0
+2025-06-01T20:58:13.943Z - debug: Extension fs-store@4.1.0 was disabled
+2025-06-01T20:58:13.944Z - info: Using extension handlebars@4.0.1
+2025-06-01T20:58:13.946Z - info: Using extension import-export@4.0.6
+2025-06-01T20:58:13.963Z - info: Using extension jsrender@4.0.0
+2025-06-01T20:58:13.965Z - info: Using extension licensing@4.0.4
+2025-06-01T20:58:14.019Z - info: Using extension localization@4.0.1
+2025-06-01T20:58:14.021Z - info: Using extension npm@4.0.0
+2025-06-01T20:58:14.030Z - info: Using extension pdf-utils@4.3.0
+2025-06-01T20:58:14.032Z - info: Using extension reports@4.1.3
+2025-06-01T20:58:14.035Z - info: Using extension tags@4.0.1
+2025-06-01T20:58:14.038Z - info: Using extension text@4.0.2
+2025-06-01T20:58:14.040Z - info: Using extension version-control@4.1.0
+2025-06-01T20:58:14.055Z - info: Using extension assets@4.2.1
+2025-06-01T20:58:14.068Z - info: Using extension authorization@4.1.0
+2025-06-01T20:58:14.075Z - debug: Extension authorization@4.1.0 was disabled
+2025-06-01T20:58:14.076Z - info: Using extension browser-client@4.1.0
+2025-06-01T20:58:14.078Z - info: Using extension docx@4.7.0
+2025-06-01T20:58:14.081Z - info: Using extension html-to-xlsx@4.2.0
+2025-06-01T20:58:14.313Z - info: html-to-xlsx detected chrome as available html engine
+2025-06-01T20:58:14.314Z - info: Using extension pptx@4.4.0
+2025-06-01T20:58:14.317Z - info: Using extension scheduling@4.1.0
+2025-06-01T20:58:14.352Z - info: Using extension scripts@4.2.0
+2025-06-01T20:58:14.354Z - info: Using extension static-pdf@4.1.0
+2025-06-01T20:58:14.357Z - info: Using extension studio@4.3.0
+2025-06-01T20:58:14.512Z - info: Using extension xlsx@4.4.0
+2025-06-01T20:58:14.516Z - info: Using extension chrome-pdf@4.1.1
+2025-06-01T20:58:14.520Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-06-01T20:58:14.521Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-06-01T20:58:14.522Z - info: Using extension public-templates@4.0.0
+2025-06-01T20:58:14.524Z - debug: Extension public-templates@4.0.0 was disabled
+2025-06-01T20:58:14.525Z - info: Using extension sample-template@4.0.1
+2025-06-01T20:58:14.529Z - info: Using extension studio-theme-dark@4.0.0
+2025-06-01T20:58:14.533Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-06-01T20:58:14.533Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-06-01T20:58:14.550Z - debug: studio default theme is: light
+2025-06-01T20:58:14.555Z - info: Creating default express app.
+2025-06-01T20:58:14.584Z - info: jsreport server successfully started on http port: 5488
+2025-06-01T20:58:14.586Z - info: Verifying license key free
+2025-06-01T20:58:14.587Z - info: Using free license
+2025-06-01T20:58:14.598Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-06-01T20:58:14.599Z - info: Migration successful
+2025-06-01T20:58:14.600Z - debug: Creating samples is disabled
+2025-06-01T20:58:14.601Z - info: Initializing worker threads
+2025-06-01T20:58:14.601Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-06-01T20:58:15.675Z - info: 2 worker threads initialized in 1074ms
+2025-06-01T20:58:15.676Z - info: Starting temp files cleanup with 180000ms threshold
+2025-06-01T20:58:15.676Z - info: reporter initialized
+2025-06-01T20:58:32.562Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T20:58:32.566Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T20:58:32.572Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T20:58:32.682Z - info: Found 36 extension(s)
+2025-06-01T20:58:32.718Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T20:58:32.720Z - debug: Discovered 36 extensions
+2025-06-01T20:58:32.769Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-06-01T20:58:32.771Z - info: Using extension authentication@4.2.3
+2025-06-01T20:58:33.065Z - debug: Extension authentication@4.2.3 was disabled
+2025-06-01T20:58:33.067Z - info: Using extension base@4.0.0
+2025-06-01T20:58:33.071Z - info: Using extension child-templates@4.1.0
+2025-06-01T20:58:33.074Z - info: Using extension cli@4.1.0
+2025-06-01T20:58:33.079Z - info: Using extension components@4.0.2
+2025-06-01T20:58:33.081Z - info: Using extension data@4.1.0
+2025-06-01T20:58:33.083Z - info: Using extension express@4.2.0
+2025-06-01T20:58:33.647Z - info: Using extension freeze@4.0.0
+2025-06-01T20:58:33.650Z - info: Using extension fs-store@4.1.0
+2025-06-01T20:58:33.931Z - debug: Extension fs-store@4.1.0 was disabled
+2025-06-01T20:58:33.932Z - info: Using extension handlebars@4.0.1
+2025-06-01T20:58:33.934Z - info: Using extension import-export@4.0.6
+2025-06-01T20:58:33.951Z - info: Using extension jsrender@4.0.0
+2025-06-01T20:58:33.953Z - info: Using extension licensing@4.0.4
+2025-06-01T20:58:34.021Z - info: Using extension localization@4.0.1
+2025-06-01T20:58:34.023Z - info: Using extension npm@4.0.0
+2025-06-01T20:58:34.032Z - info: Using extension pdf-utils@4.3.0
+2025-06-01T20:58:34.034Z - info: Using extension reports@4.1.3
+2025-06-01T20:58:34.038Z - info: Using extension tags@4.0.1
+2025-06-01T20:58:34.041Z - info: Using extension text@4.0.2
+2025-06-01T20:58:34.043Z - info: Using extension version-control@4.1.0
+2025-06-01T20:58:34.059Z - info: Using extension assets@4.2.1
+2025-06-01T20:58:34.071Z - info: Using extension authorization@4.1.0
+2025-06-01T20:58:34.078Z - debug: Extension authorization@4.1.0 was disabled
+2025-06-01T20:58:34.078Z - info: Using extension browser-client@4.1.0
+2025-06-01T20:58:34.081Z - info: Using extension docx@4.7.0
+2025-06-01T20:58:34.085Z - info: Using extension html-to-xlsx@4.2.0
+2025-06-01T20:58:34.421Z - info: html-to-xlsx detected chrome as available html engine
+2025-06-01T20:58:34.422Z - info: Using extension pptx@4.4.0
+2025-06-01T20:58:34.427Z - info: Using extension scheduling@4.1.0
+2025-06-01T20:58:34.469Z - info: Using extension scripts@4.2.0
+2025-06-01T20:58:34.471Z - info: Using extension static-pdf@4.1.0
+2025-06-01T20:58:34.474Z - info: Using extension studio@4.3.0
+2025-06-01T20:58:34.646Z - info: Using extension xlsx@4.4.0
+2025-06-01T20:58:34.649Z - info: Using extension chrome-pdf@4.1.1
+2025-06-01T20:58:34.652Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-06-01T20:58:34.653Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-06-01T20:58:34.655Z - info: Using extension public-templates@4.0.0
+2025-06-01T20:58:34.661Z - debug: Extension public-templates@4.0.0 was disabled
+2025-06-01T20:58:34.663Z - info: Using extension sample-template@4.0.1
+2025-06-01T20:58:34.665Z - info: Using extension studio-theme-dark@4.0.0
+2025-06-01T20:58:34.667Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-06-01T20:58:34.668Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-06-01T20:58:34.684Z - debug: studio default theme is: light
+2025-06-01T20:58:34.692Z - info: Creating default express app.
+2025-06-01T20:58:34.721Z - info: jsreport server successfully started on http port: 5488
+2025-06-01T20:58:34.725Z - info: Verifying license key free
+2025-06-01T20:58:34.728Z - info: Using free license
+2025-06-01T20:58:34.736Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-06-01T20:58:34.739Z - info: Migration successful
+2025-06-01T20:58:34.740Z - debug: Creating samples is disabled
+2025-06-01T20:58:34.742Z - info: Initializing worker threads
+2025-06-01T20:58:34.743Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-06-01T20:58:35.884Z - info: 2 worker threads initialized in 1142ms
+2025-06-01T20:58:35.885Z - info: Starting temp files cleanup with 180000ms threshold
+2025-06-01T20:58:35.886Z - info: reporter initialized
+2025-06-01T20:58:37.910Z - info: Render request 1 queued for execution and waiting for available worker rootId=sq3f0t59ll2s7o4, id=sq3f0t59ll2s7o4
+2025-06-01T21:01:43.992Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T21:01:43.996Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:01:44.000Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:01:44.104Z - info: Found 36 extension(s)
+2025-06-01T21:01:44.139Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T21:01:44.141Z - debug: Discovered 36 extensions
+2025-06-01T21:01:44.191Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-06-01T21:01:44.193Z - info: Using extension authentication@4.2.3
+2025-06-01T21:01:44.450Z - debug: Extension authentication@4.2.3 was disabled
+2025-06-01T21:01:44.451Z - info: Using extension base@4.0.0
+2025-06-01T21:01:44.455Z - info: Using extension child-templates@4.1.0
+2025-06-01T21:01:44.456Z - info: Using extension cli@4.1.0
+2025-06-01T21:01:44.461Z - info: Using extension components@4.0.2
+2025-06-01T21:01:44.463Z - info: Using extension data@4.1.0
+2025-06-01T21:01:44.464Z - info: Using extension express@4.2.0
+2025-06-01T21:01:45.018Z - info: Using extension freeze@4.0.0
+2025-06-01T21:01:45.020Z - info: Using extension fs-store@4.1.0
+2025-06-01T21:01:45.203Z - debug: Extension fs-store@4.1.0 was disabled
+2025-06-01T21:01:45.204Z - info: Using extension handlebars@4.0.1
+2025-06-01T21:01:45.206Z - info: Using extension import-export@4.0.6
+2025-06-01T21:01:45.222Z - info: Using extension jsrender@4.0.0
+2025-06-01T21:01:45.224Z - info: Using extension licensing@4.0.4
+2025-06-01T21:01:45.277Z - info: Using extension localization@4.0.1
+2025-06-01T21:01:45.279Z - info: Using extension npm@4.0.0
+2025-06-01T21:01:45.286Z - info: Using extension pdf-utils@4.3.0
+2025-06-01T21:01:45.289Z - info: Using extension reports@4.1.3
+2025-06-01T21:01:45.293Z - info: Using extension tags@4.0.1
+2025-06-01T21:01:45.295Z - info: Using extension text@4.0.2
+2025-06-01T21:01:45.297Z - info: Using extension version-control@4.1.0
+2025-06-01T21:01:45.314Z - info: Using extension assets@4.2.1
+2025-06-01T21:01:45.328Z - info: Using extension authorization@4.1.0
+2025-06-01T21:01:45.333Z - debug: Extension authorization@4.1.0 was disabled
+2025-06-01T21:01:45.334Z - info: Using extension browser-client@4.1.0
+2025-06-01T21:01:45.337Z - info: Using extension docx@4.7.0
+2025-06-01T21:01:45.340Z - info: Using extension html-to-xlsx@4.2.0
+2025-06-01T21:01:45.615Z - info: html-to-xlsx detected chrome as available html engine
+2025-06-01T21:01:45.616Z - info: Using extension pptx@4.4.0
+2025-06-01T21:01:45.619Z - info: Using extension scheduling@4.1.0
+2025-06-01T21:01:45.664Z - info: Using extension scripts@4.2.0
+2025-06-01T21:01:45.667Z - info: Using extension static-pdf@4.1.0
+2025-06-01T21:01:45.669Z - info: Using extension studio@4.3.0
+2025-06-01T21:01:45.810Z - info: Using extension xlsx@4.4.0
+2025-06-01T21:01:45.814Z - info: Using extension chrome-pdf@4.1.1
+2025-06-01T21:01:45.817Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-06-01T21:01:45.818Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-06-01T21:01:45.819Z - info: Using extension public-templates@4.0.0
+2025-06-01T21:01:45.821Z - debug: Extension public-templates@4.0.0 was disabled
+2025-06-01T21:01:45.822Z - info: Using extension sample-template@4.0.1
+2025-06-01T21:01:45.825Z - info: Using extension studio-theme-dark@4.0.0
+2025-06-01T21:01:45.827Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-06-01T21:01:45.827Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-06-01T21:01:45.840Z - debug: studio default theme is: light
+2025-06-01T21:01:45.845Z - info: Creating default express app.
+2025-06-01T21:01:45.870Z - info: jsreport server successfully started on http port: 5488
+2025-06-01T21:01:45.872Z - info: Verifying license key free
+2025-06-01T21:01:45.873Z - info: Using free license
+2025-06-01T21:01:45.883Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-06-01T21:01:45.885Z - info: Migration successful
+2025-06-01T21:01:45.886Z - debug: Creating samples is disabled
+2025-06-01T21:01:45.887Z - info: Initializing worker threads
+2025-06-01T21:01:45.888Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-06-01T21:01:46.943Z - info: 2 worker threads initialized in 1056ms
+2025-06-01T21:01:46.943Z - info: Starting temp files cleanup with 180000ms threshold
+2025-06-01T21:01:46.944Z - info: reporter initialized
+2025-06-01T21:04:21.167Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T21:04:21.170Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:04:21.175Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:04:21.298Z - info: Found 36 extension(s)
+2025-06-01T21:04:21.341Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T21:04:21.344Z - debug: Discovered 36 extensions
+2025-06-01T21:04:21.394Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server
+2025-06-01T21:04:21.396Z - info: Using extension authentication@4.2.3
+2025-06-01T21:04:21.654Z - debug: Extension authentication@4.2.3 was disabled
+2025-06-01T21:04:21.655Z - info: Using extension base@4.0.0
+2025-06-01T21:04:21.660Z - info: Using extension child-templates@4.1.0
+2025-06-01T21:04:21.662Z - info: Using extension cli@4.1.0
+2025-06-01T21:04:21.666Z - info: Using extension components@4.0.2
+2025-06-01T21:04:21.668Z - info: Using extension data@4.1.0
+2025-06-01T21:04:21.669Z - info: Using extension express@4.2.0
+2025-06-01T21:04:22.187Z - info: Using extension freeze@4.0.0
+2025-06-01T21:04:22.189Z - info: Using extension fs-store@4.1.0
+2025-06-01T21:04:22.368Z - debug: Extension fs-store@4.1.0 was disabled
+2025-06-01T21:04:22.369Z - info: Using extension handlebars@4.0.1
+2025-06-01T21:04:22.371Z - info: Using extension import-export@4.0.6
+2025-06-01T21:04:22.385Z - info: Using extension jsrender@4.0.0
+2025-06-01T21:04:22.387Z - info: Using extension licensing@4.0.4
+2025-06-01T21:04:22.439Z - info: Using extension localization@4.0.1
+2025-06-01T21:04:22.440Z - info: Using extension npm@4.0.0
+2025-06-01T21:04:22.447Z - info: Using extension pdf-utils@4.3.0
+2025-06-01T21:04:22.450Z - info: Using extension reports@4.1.3
+2025-06-01T21:04:22.454Z - info: Using extension tags@4.0.1
+2025-06-01T21:04:22.456Z - info: Using extension text@4.0.2
+2025-06-01T21:04:22.457Z - info: Using extension version-control@4.1.0
+2025-06-01T21:04:22.473Z - info: Using extension assets@4.2.1
+2025-06-01T21:04:22.486Z - info: Using extension authorization@4.1.0
+2025-06-01T21:04:22.492Z - debug: Extension authorization@4.1.0 was disabled
+2025-06-01T21:04:22.492Z - info: Using extension browser-client@4.1.0
+2025-06-01T21:04:22.496Z - info: Using extension docx@4.7.0
+2025-06-01T21:04:22.499Z - info: Using extension html-to-xlsx@4.2.0
+2025-06-01T21:04:22.739Z - info: html-to-xlsx detected chrome as available html engine
+2025-06-01T21:04:22.740Z - info: Using extension pptx@4.4.0
+2025-06-01T21:04:22.742Z - info: Using extension scheduling@4.1.0
+2025-06-01T21:04:22.786Z - info: Using extension scripts@4.2.0
+2025-06-01T21:04:22.788Z - info: Using extension static-pdf@4.1.0
+2025-06-01T21:04:22.790Z - info: Using extension studio@4.3.0
+2025-06-01T21:04:22.952Z - info: Using extension xlsx@4.4.0
+2025-06-01T21:04:22.955Z - info: Using extension chrome-pdf@4.1.1
+2025-06-01T21:04:22.957Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2025-06-01T21:04:22.958Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2025-06-01T21:04:22.959Z - info: Using extension public-templates@4.0.0
+2025-06-01T21:04:22.962Z - debug: Extension public-templates@4.0.0 was disabled
+2025-06-01T21:04:22.962Z - info: Using extension sample-template@4.0.1
+2025-06-01T21:04:22.966Z - info: Using extension studio-theme-dark@4.0.0
+2025-06-01T21:04:22.967Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2025-06-01T21:04:22.968Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2025-06-01T21:04:22.981Z - debug: studio default theme is: light
+2025-06-01T21:04:22.986Z - info: Creating default express app.
+2025-06-01T21:04:23.009Z - info: jsreport server successfully started on http port: 5488
+2025-06-01T21:04:23.010Z - info: Verifying license key free
+2025-06-01T21:04:23.013Z - info: Using free license
+2025-06-01T21:04:23.024Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2025-06-01T21:04:23.025Z - info: Migration successful
+2025-06-01T21:04:23.026Z - debug: Creating samples is disabled
+2025-06-01T21:04:23.027Z - info: Initializing worker threads
+2025-06-01T21:04:23.027Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx, chrome-pdf
+2025-06-01T21:04:24.074Z - info: 2 worker threads initialized in 1047ms
+2025-06-01T21:04:24.075Z - info: Starting temp files cleanup with 180000ms threshold
+2025-06-01T21:04:24.076Z - info: reporter initialized
+2025-06-01T21:04:32.928Z - info: Render request 1 queued for execution and waiting for available worker rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:32.942Z - info: Starting rendering request 1 rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:32.943Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:32.943Z - debug: Inline data specified. rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:32.945Z - debug: Base url not specified, skipping its injection. rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:32.946Z - debug: Rendering engine handlebars rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:33.617Z - debug: Executing recipe chrome-pdf rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.136Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.234Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/f15587fd-ada9-4e9d-84f4-45387ec6e1fa-chrome-pdf.html rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.288Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/f15587fd-ada9-4e9d-84f4-45387ec6e1fa-chrome-pdf.html rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.289Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.291Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.457Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.457Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.489Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.509Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59297,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.989Z - debug: Skipping storing report. rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:04:34.989Z - info: Rendering request 1 finished in 2063 ms rootId=wke2n0ipv7bz770, id=wke2n0ipv7bz770
+2025-06-01T21:05:14.902Z - info: Render request 2 queued for execution and waiting for available worker rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:14.908Z - info: Starting rendering request 2 rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:14.909Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:14.909Z - debug: Inline data specified. rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:14.915Z - debug: Base url not specified, skipping its injection. rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:14.916Z - debug: Rendering engine handlebars rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:15.468Z - debug: Executing recipe chrome-pdf rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:15.873Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.351Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/c18fafa7-2965-44b9-af8d-a8ca82c625f4-chrome-pdf.html rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.371Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/c18fafa7-2965-44b9-af8d-a8ca82c625f4-chrome-pdf.html rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.373Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.374Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.376Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:16.377Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:17.041Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:17.045Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59426,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:17.319Z - debug: Skipping storing report. rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:05:17.319Z - info: Rendering request 2 finished in 2419 ms rootId=5dovjm57qgt79v4, id=5dovjm57qgt79v4
+2025-06-01T21:06:32.091Z - info: Render request 3 queued for execution and waiting for available worker rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.097Z - info: Starting rendering request 3 rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.097Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.097Z - debug: Inline data specified. rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.098Z - debug: Base url not specified, skipping its injection. rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.099Z - debug: Rendering engine handlebars rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.115Z - debug: Executing recipe chrome-pdf rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.118Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.296Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/89b4d923-ae00-4f46-94ae-26e7e9e7b9da-chrome-pdf.html rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.318Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/89b4d923-ae00-4f46-94ae-26e7e9e7b9da-chrome-pdf.html rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.319Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.322Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.400Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.401Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.401Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.423Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59973,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.897Z - debug: Skipping storing report. rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:06:32.897Z - info: Rendering request 3 finished in 807 ms rootId=mhhq97x1p1vej7h, id=mhhq97x1p1vej7h
+2025-06-01T21:09:18.906Z - info: Render request 4 queued for execution and waiting for available worker rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.911Z - info: Starting rendering request 4 rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.912Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.912Z - debug: Inline data specified. rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.915Z - debug: Base url not specified, skipping its injection. rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.915Z - debug: Rendering engine handlebars rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.929Z - debug: Executing recipe chrome-pdf rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:18.931Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.134Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/18f65bc3-f2b4-4cc2-95ee-df72a55fd2e5-chrome-pdf.html rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.175Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/18f65bc3-f2b4-4cc2-95ee-df72a55fd2e5-chrome-pdf.html rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.178Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.179Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.248Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.249Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.250Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.269Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59974,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.627Z - debug: Skipping storing report. rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:19.627Z - info: Rendering request 4 finished in 723 ms rootId=97xt7e7iv6wmlpj, id=97xt7e7iv6wmlpj
+2025-06-01T21:09:37.389Z - info: Render request 5 queued for execution and waiting for available worker rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.393Z - info: Starting rendering request 5 rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.393Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.393Z - debug: Inline data specified. rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.394Z - debug: Base url not specified, skipping its injection. rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.395Z - debug: Rendering engine handlebars rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.403Z - debug: Executing recipe chrome-pdf rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.407Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.499Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/f818ed3b-4c82-4d96-a08e-3bcc2da10d62-chrome-pdf.html rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.520Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/f818ed3b-4c82-4d96-a08e-3bcc2da10d62-chrome-pdf.html rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.521Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.533Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.597Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.598Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.599Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.618Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59982,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.985Z - debug: Skipping storing report. rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:09:37.985Z - info: Rendering request 5 finished in 598 ms rootId=kdvvalz8k88j1mk, id=kdvvalz8k88j1mk
+2025-06-01T21:10:11.684Z - info: Render request 6 queued for execution and waiting for available worker rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.688Z - info: Starting rendering request 6 rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.688Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.688Z - debug: Inline data specified. rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.689Z - debug: Base url not specified, skipping its injection. rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.690Z - debug: Rendering engine handlebars rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.700Z - debug: Executing recipe chrome-pdf rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.702Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.796Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/278571ef-cc81-449c-aedb-198e79076a32-chrome-pdf.html rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.827Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/278571ef-cc81-449c-aedb-198e79076a32-chrome-pdf.html rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.832Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.834Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.900Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.901Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.901Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:11.918Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59982,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:12.265Z - debug: Skipping storing report. rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:10:12.265Z - info: Rendering request 6 finished in 582 ms rootId=rcwj0eaap1ice0m, id=rcwj0eaap1ice0m
+2025-06-01T21:11:34.461Z - info: Render request 7 queued for execution and waiting for available worker rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.463Z - info: Starting rendering request 7 rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.463Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.463Z - debug: Inline data specified. rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.464Z - debug: Base url not specified, skipping its injection. rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.464Z - debug: Rendering engine handlebars rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.475Z - debug: Executing recipe chrome-pdf rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.477Z - debug: Converting with chrome Chrome/133.0.6943.126 using chrome-pool strategy rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.561Z - debug: Page request: GET (document) file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/c86df0ed-8489-4802-8191-044731e3d868-chrome-pdf.html rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.577Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Patheo24/AppData/Local/Temp/jsreport/autocleanup/c86df0ed-8489-4802-8191-044731e3d868-chrome-pdf.html rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.578Z - debug: Page request: GET (image) https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.579Z - debug: Page request: GET (font) file:///C:/fonts/Kalpurush.ttf rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.645Z - warn: Page request failed: GET (font) file:///C:/fonts/Kalpurush.ttf, failure: net::ERR_ACCESS_DENIED rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.646Z - debug: [36m(console:error) Failed to load resource: net::ERR_ACCESS_DENIED[39m userLevel=true, rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.647Z - debug: Page request finished: GET (image) 200 https://res.cloudinary.com/dpes1dyqb/image/upload/v1738768933/logo_myycxt.jpg rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:34.665Z - debug: Running chrome with params {"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","format":"A4","landscape":true,"displayHeaderFooter":false,"printBackground":true,"timeout":59984,"margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}} rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:35.018Z - debug: Skipping storing report. rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:11:35.018Z - info: Rendering request 7 finished in 558 ms rootId=jr26j37ghtozlqc, id=jr26j37ghtozlqc
+2025-06-01T21:12:53.595Z - info: Initializing jsreport (version: 4.8.0, configuration file: none, nodejs: 22.11.0)
+2025-06-01T21:12:53.601Z - info: Searching for available extensions in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:12:53.607Z - info: Extensions location cache contains up to date information, skipping crawling in C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\
+2025-06-01T21:12:53.765Z - info: Found 36 extension(s)
+2025-06-01T21:12:53.817Z - debug: Writing extension locations cache to C:\Users\Patheo24\AppData\Local\Temp\jsreport\core\locations.json
+2025-06-01T21:12:53.819Z - debug: Discovered 36 extensions
+2025-06-01T21:12:53.868Z - info: Using anonymous extension at C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server

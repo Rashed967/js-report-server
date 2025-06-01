@@ -146,9 +146,13 @@
                     <td >{{formatDate this.birthDate}}</td>
                     <td>
                         {{#if (eq this.registrationType "নিয়মিত")}}
-                            {{../selectedExam.registrationFeeForRegularStudent}}
+                            {{#with (lookup ../selectedExam.examFeeForBoys 0)}}
+                                {{examFeeForRegularStudent}}
+                            {{/with}}
                         {{else}}
-                            {{../selectedExam.registrationFeeForIrregularStudent}}
+                            {{#with (lookup ../selectedExam.examFeeForBoys 0)}}
+                                {{examFeeForIrregularStudent}}
+                            {{/with}}
                         {{/if}}
                     </td>
                 </tr>
@@ -157,7 +161,7 @@
         </table>
 
         <div class="footer">
-            <p >মোট পরীক্ষার্থীর সংখ্যা: ............... মোট টাকা (অংকে) ......................... (কথায়)</p>
+            <p>মোট পরীক্ষার্থীর সংখ্যা: {{enToBnNumber this.examinees.length}} মোট টাকা (অংকে) {{enToBnNumber this.totalFee}} (কথায়) {{numberToBengaliWords this.totalFee}} টাকা</p>
             <p style="font-weight: bold;">বিঃ দ্রঃ </p>
             <p>১। ফরমে পরীক্ষার্থীর কোন তথ্য অসম্পূর্ণ অথবা ত্রুটি পরিলক্ষিত হলে তা সংশোধন করুন</p>
             <p>২। এ ফরমের ফটোকপি মাদরাসার নথিতে সংরক্ষণ করুন।</p>
