@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20mm;
+            box-sizing: border-box;
+        }
+        .admit-card {
+            border: 2px solid #000;
+            padding: 10mm;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 15mm;
+        }
+        .header h1, .header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .header .arabic {
+             font-family: 'Scheherazade New', serif; /* Placeholder for Arabic font */
+             font-size: 24pt;
+             margin-bottom: 5mm;
+        }
+        .header .bengali-board-name {
+            font-size: 16pt;
+            margin-bottom: 2mm;
+        }
+        .header .bengali-sub-name {
+            font-size: 12pt;
+            margin-bottom: 5mm;
+        }
+        .exam-info {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .exam-info h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 14pt;
+            margin-bottom: 5mm;
+        }
+        .exam-info p {
+            margin: 0;
+            padding: 0;
+            font-size: 12pt;
+        }
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15mm;
+        }
+        .details-table td {
+            padding: 5mm 0;
+            vertical-align: top;
+            font-size: 12pt;
+        }
+        .details-table td:first-child {
+            width: 30%;
+            font-weight: bold;
+        }
+        .admit-card-box {
+            border: 1px solid #000;
+            padding: 3mm 5mm;
+            display: inline-block;
+            margin: 0 auto;
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 10mm;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .signature-section div {
+            width: 45%;
+            text-align: center;
+        }
+        .signature-section .signature-line {
+            border-top: 1px solid #000;
+            margin-bottom: 5mm;
+        }
+        .signature-section .name {
+            font-weight: bold;
+        }
+        .date-section {
+            text-align: right;
+            margin-top: 10mm;
+            font-size: 10pt;
+        }
+
+        /* Placeholders for data */
+        .data-label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="admit-card">
+        <div class="header">
+            <div class="arabic">{{boardInfo.boardName.arabicName}}</div>
+            <div class="bengali-board-name">{{boardInfo.boardName.bengaliName}}</div>
+            <div class="bengali-sub-name">({{boardInfo.boardName.englishName}})</div>
+        </div>
+
+        <div class="exam-info">
+            <h3>পরীক্ষা নিয়ন্ত্রণ বিভাগ</h3>
+            <p>{{examName}}-১৪৪৬ হিজরী/২০২৫ ঈসায়ী</p>
+            <div class="admit-card-box">প্রবেশপত্র</div>
+        </div>
+
+        <table class="details-table">
+            <tr>
+                <td>নিবন্ধন নং</td>
+                <td>: {{registrationNumber}}</td>
+                <td>মারহালা</td>
+                <td>ফযীলত</td>
+            </tr>
+            <tr>
+                <td>রোল নং</td>
+                <td>: {{roll}}</td>
+                 <td>জন্ম তারিখ</td>
+                 <td>: {{formatBnDate birthDate}}</td>
+            </tr>
+             <tr>
+                <td>পরীক্ষার্থীর নাম</td>
+                <td>: {{examineeName.bengaliName}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>পিতার নাম</td>
+                <td>: {{fatherName.bengaliName}}</td>
+                 <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>মাদরাসা</td>
+                <td>: {{madrasahInfo.madrasahNames.bengaliName}}, {{madrasahInfo.code}}</td>
+                 <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>মারকায</td>
+                <td>: {{markazMadrasah.madrasahNames.bengaliName}}, {{markazMadrasah.code}}</td>
+                 <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="signature-section">
+            <div>
+                <div class="signature-line"></div>
+                <div class="name">মুহতামিমের স্বাক্ষর ও তারিখ</div>
+            </div>
+            <div>
+                 <div class="signature-line"></div>
+                <div class="name">পরীক্ষা নিয়ন্ত্রক</div>
+                <div class="name">মাওলানা ফয়সাল উমর ফারুক</div>
+            </div>
+        </div>
+
+        <div class="date-section">
+            তারিখ: ১০/০১/২০২৫ঈ.
+        </div>
+
+    </div>
+</body>
+</html> 
