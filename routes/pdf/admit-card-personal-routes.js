@@ -42,7 +42,8 @@ router.post('/admit-card-personal', async (req, res) => {
                     marginRight: '1cm',
                     marginBottom: '1cm',
                     marginLeft: '1cm',
-                    format: 'A4',
+                    format: 'A5',
+                    landscape: true,
                     displayHeaderFooter: false,
                     printBackground: true
                 }
