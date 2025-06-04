@@ -12,6 +12,7 @@ const markazStudentListRoutes = require('./markaz-student-list-routes');
 // Import the new registration receipt routes
 const registrationReceiptRoutes = require('./registration-receipt-routes');
 const admitCardPersonalRoutes = require('./admit-card-personal-routes');
+const admitCardByMadrasahRoutes = require('./admit-card-by-madrasah-routes');
 
 // Mount the specific route files under the /api/pdf base path (handled in server.js)
 router.use(generalPdfRoutes);
@@ -19,6 +20,7 @@ router.use(examineeListRoutes);
 router.use(markazStudentListRoutes);
 router.use(registrationReceiptRoutes); // Mount registration receipt routes directly under /api/pdf
 router.use(admitCardPersonalRoutes);
+router.use(admitCardByMadrasahRoutes);
 
 // We can keep global PDF related setup here if needed
 // For example, global handlebars helper registration if they apply to all PDF templates
