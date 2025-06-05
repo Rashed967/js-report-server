@@ -5,13 +5,25 @@ const jsreport = require('jsreport')({
   studio: {
     enabled: false
   },
-  // Chrome PDF configuration
+  // Disable standalone server
+  standalone: false,
+  // Disable all UI components
   extensions: {
+    studio: {
+      enabled: false
+    },
+    'express': {
+      enabled: false
+    },
     'chrome-pdf': {
       launchOptions: {
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       }
     }
+  },
+  // Disable all UI routes
+  express: {
+    enabled: false
   }
 });
 
@@ -53,24 +65,19 @@ app.use('/api/pdf', pdfRouter);
 // Initialize jsreport first, then start the server
 const startServer = async () => {
   try {
-
-        // Use PORT from environment variable (for Render) or default to 5490
-        const port = process.env.PORT || 5490;
+    await jsreport.init();
+    console.log('jsreport initialized successfully in embedded mode');
     
-
+    // Use PORT from environment variable (for Render) or default to 5490
+    const port = process.env.PORT || 5488;
+    
     app.listen(port, () => {
       console.log(`Express server running on port ${port}`);
     });
 
-
     app.get('/hello', (req, res) => {
       res.send('Hello World');
     });
-
-    await jsreport.init();
-    console.log('jsreport initialized successfully in embedded mode');
-    
-
 
   } catch (e) {
     console.error('Failed to initialize jsreport:', e);
