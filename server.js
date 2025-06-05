@@ -54,6 +54,10 @@ app.use('/api/pdf', pdfRouter);
 const startServer = async () => {
   try {
 
+        // Use PORT from environment variable (for Render) or default to 5490
+        const port = process.env.PORT || 5490;
+    
+
     app.listen(port, () => {
       console.log(`Express server running on port ${port}`);
     });
@@ -66,9 +70,7 @@ const startServer = async () => {
     await jsreport.init();
     console.log('jsreport initialized successfully in embedded mode');
     
-    // Use PORT from environment variable (for Render) or default to 5490
-    const port = process.env.PORT || 5490;
-    
+
 
   } catch (e) {
     console.error('Failed to initialize jsreport:', e);
