@@ -123,3 +123,48 @@ ProtocolError: Protocol error (Page.printToPDF): invalid print parameters: conte
     at module.exports (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\validateEntityName.js:26:11)
     at Object.insert (C:\projects2\jsreport-server\node_modules\@jsreport\jsreport-core\lib\main\store\collection.js:123:7)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-06-05T12:10:14.942Z - error: Error when processing render request 1
+(because) browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+Error: Browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+  at ChromeLauncher.launch (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\puppeteer-core\lib\cjs\puppeteer\node\BrowserLauncher.js:89:19)
+  at async createBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:105:26)
+  at async allocateBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:120:5)
+  at async getBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:23:30)
+  at async module.exports (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:11:19)
+  at async execute (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:20:22)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\lazyRecipe.js:75:20
+  at async invokeRender (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:93:5)
+  at async WorkerReporter._render (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=zi4n8533hnsntix, id=zi4n8533hnsntix
+2025-06-05T12:10:14.942Z - error: Rendering request 1 finished with error in 804 ms rootId=zi4n8533hnsntix, id=zi4n8533hnsntix
+2025-06-05T12:10:17.271Z - error: Error when processing render request 2
+(because) browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+Error: Browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+  at ChromeLauncher.launch (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\puppeteer-core\lib\cjs\puppeteer\node\BrowserLauncher.js:89:19)
+  at async createBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:105:26)
+  at async allocateBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:120:5)
+  at async getBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:23:30)
+  at async module.exports (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:11:19)
+  at async execute (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:20:22)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\lazyRecipe.js:75:20
+  at async invokeRender (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:93:5)
+  at async WorkerReporter._render (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=f7ejh5g0s9rn3y9, id=f7ejh5g0s9rn3y9
+2025-06-05T12:10:17.271Z - error: Rendering request 2 finished with error in 856 ms rootId=f7ejh5g0s9rn3y9, id=f7ejh5g0s9rn3y9
+2025-06-05T12:11:06.652Z - error: Error when processing render request 1
+(because) browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+Error: Browser was not found at the configured executablePath (/opt/render/.cache/puppeteer/chrome/linux-133.0.6943.126/chrome-linux/chrome)
+  at ChromeLauncher.launch (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\puppeteer-core\lib\cjs\puppeteer\node\BrowserLauncher.js:89:19)
+  at async createBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:105:26)
+  at async allocateBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:120:5)
+  at async getBrowser (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:23:30)
+  at async module.exports (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:11:19)
+  at async execute (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\chromePoolStrategy.js:20:22)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\jsreport\node_modules\@jsreport\jsreport-chrome-pdf\lib\lazyRecipe.js:75:20
+  at async invokeRender (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:93:5)
+  at async WorkerReporter._render (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\projects2\my-ongoing-projects\Board-management-software\pdf-generate-backend-server\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=slfyshibk58925r, id=slfyshibk58925r
+2025-06-05T12:11:06.652Z - error: Rendering request 1 finished with error in 645 ms rootId=slfyshibk58925r, id=slfyshibk58925r
