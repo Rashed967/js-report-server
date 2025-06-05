@@ -17,7 +17,10 @@ const jsreport = require('jsreport')({
     },
     'chrome-pdf': {
       launchOptions: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: process.env.NODE_ENV === 'production' 
+          ? '/opt/render/.cache/puppeteer/chrome/linux-127.0.6533.88/chrome-linux/chrome'
+          : undefined
       }
     }
   },
