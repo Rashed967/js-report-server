@@ -54,8 +54,11 @@ const startServer = async () => {
     await jsreport.init();
     console.log('jsreport initialized successfully in embedded mode');
     
-    app.listen(5490, () => {
-      console.log('Express server running on http://localhost:5490');
+    // Use PORT from environment variable (for Render) or default to 5490
+    const port = process.env.PORT || 5490;
+    
+    app.listen(port, () => {
+      console.log(`Express server running on port ${port}`);
     });
 
     app.get('/hello', (req, res) => {

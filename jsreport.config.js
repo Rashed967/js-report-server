@@ -20,6 +20,11 @@ module.exports = {
     },
     "fs-store": {
       syncModifications: false
+    },
+    "chrome-pdf": {
+      launchOptions: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      }
     }
   },
   license: {
