@@ -1,5 +1,8 @@
 module.exports = {
-  httpPort: 5488,
+  httpPort: 0,
+  studio: {
+    enabled: false
+  },
   allowLocalFilesAccess: true,
   store: {
     provider: "fs"
@@ -10,14 +13,10 @@ module.exports = {
   reportTimeout: 60000,
   extensions: {
     authentication: {
-      admin: {
-        username: "admin",
-        password: "password"
-      },
       enabled: false
     },
     "sample-template": {
-      createSamples: true
+      createSamples: false
     },
     "fs-store": {
       syncModifications: false

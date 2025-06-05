@@ -5,6 +5,11 @@ const jsreport = require('jsreport')({
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       }
     }
+  },
+  // Disable standalone server and UI
+  httpPort: 0,
+  studio: {
+    enabled: false
   }
 });
 
@@ -47,7 +52,7 @@ app.use('/api/pdf', pdfRouter);
 const startServer = async () => {
   try {
     await jsreport.init();
-    console.log('jsreport initialized successfully');
+    console.log('jsreport initialized successfully in embedded mode');
     
     app.listen(5490, () => {
       console.log('Express server running on http://localhost:5490');

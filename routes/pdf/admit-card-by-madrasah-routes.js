@@ -6,6 +6,7 @@ const handlebars = require('handlebars');
 const { loadTemplate, registerHelpers } = require('../../helpers/pdf-helpers');
 
 router.post('/admit-card-by-madrasah', async (req, res) => {
+    console.log(req.body);
     try {
         const students = req.body;
         // console.log(students)
