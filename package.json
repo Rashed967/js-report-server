@@ -13,15 +13,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsreport/jsreport-chrome-pdf": "^3.11.0",
-    "@jsreport/jsreport-core": "^3.11.3",
-    "@jsreport/jsreport-express": "^3.11.3",
-    "@jsreport/jsreport-handlebars": "^3.11.3",
+    "@jsreport/jsreport-chrome-pdf": "^4.0.0",
+    "@jsreport/jsreport-core": "^4.0.0",
+    "@jsreport/jsreport-express": "^4.0.0",
+    "@jsreport/jsreport-handlebars": "^4.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "handlebars": "^4.7.8",
-    "jsreport": "^3.11.3",
+    "jsreport": "^4.0.0",
     "puppeteer": "^22.3.0"
   },
   "devDependencies": {
